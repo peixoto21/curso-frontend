@@ -23,16 +23,16 @@ Arquivo B │  Versão 1 │ Versão 2
 
 ## Commits
 Informação de alteração
-<<<<<<< HEAD
+
 - após testado todo seu código
 - git add *
 - git commit -m "mensagem"
 - git push (enviar alterações para o repositório Github)
 - git pull (puxar / trazer alterações do Github para sua maquina)
-=======
+
 - após testado todo seu codigo
 - teste para o pull
->>>>>>> 9feeeda22b4a164e30f46c8622e32d924503ce99
+
 
 ## GitFlow
 Fluxo do Git
