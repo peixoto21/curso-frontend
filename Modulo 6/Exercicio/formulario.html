@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+	<head>	
+		<title>HTML - Formularios</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="./style.css">
+	<body >	
+		<header>
+			<div>
+				
+				<h2 >Curso Front-end - HTML</h2>
+			</div>
+		</header>
+
+		<section>
+			<nav>
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#sobre">Sobre</a></li>
+					<li><a href="#contato">Contato</a></li>
+				</ul>
+			</nav>
+
+			<article>
+				<div class="topocontato">
+					<h1>Contato</h1>
+
+					<p id="titulo">Preencha os campos abaixo</p>
+				</div>
+
+				<form method="post">
+					<div>
+						<label for="nome" class="write">Nome</label>
+						<input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+					</div>
+
+					<div>
+						<label for="email" class="write">E-mail</label>
+						<input type="email" name="email" id="email" placeholder="email@email.com">
+					</div>
+
+					<div>
+						<label for="mensagem" class="write">Mensagem</label>
+						<textarea name="mensagem" id="mensagem" rows="5"></textarea>
+					</div>
+
+					<div>			
+						<p>
+							<label class="choice">Qual linguagens você prefere?</label>
+							<input type="radio" name="linguagens" value="html">HTML
+							<input type="radio" name="linguagens" value="css">CSS
+							<input type="radio" name="linguagens" value="javascript">JavaScript
+						</p>
+					</div>
+
+					<div>			
+						<p>
+							<label class="choice">Quais linguagens você sabe?</label>
+							<input type="checkbox" name="linguagens" value="html">HTML
+							<input type="checkbox" name="linguagens" value="css">CSS
+							<input type="checkbox" name="linguagens" value="javascript">JavaScript
+						</p>
+					</div>
+
+					<div>
+						<label class="choice">Qual a sua cor favorita?</label>
+						<select>
+							<option value="azul" >Azul</option>
+							<option value="verde">Verde</option>
+							<option value="vermelho"selected>Vermelho</option>
+						</select>
+					</div>
+
+
+					<div>
+						<input type="submit">
+					</div>
+
+				</form>
+
+				
+			</article>
+		</section>
+		<footer>
+			<p>Desenvolvido por Victor</p>
+		</footer>
+	</body>
+</html>

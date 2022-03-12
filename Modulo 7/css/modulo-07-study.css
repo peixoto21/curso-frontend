@@ -1,0 +1,180 @@
+/* Importando CSS de Tabelas */
+@import url('tabelas.css');
+
+/* 
+
+	Herança
+
+	1. Sobreposição / Sobrescreve
+	2. Aplica a último estilo definido
+	3. Prioriza estilo específicas (com seletores mais próximos)
+	4. Se aplica a todas as propriedades
+
+ */
+
+
+html {
+	font-family: sans-serif;
+	color: #333;
+}
+
+p {
+	color: #454545;
+}
+
+
+header p{
+	color: #fff ;
+	font-size: 1.5rem;
+}
+
+/* 
+
+	Combinadores
+
+	(espaço) seletor descendent .
+	(>) combinador de seletores filhos.
+	(+) combinador de elementos irmãos adjacentes / que vem logo na sequencia.
+	(~) combinador de elementos irmãos, que vem após o de referencia, mas de forma geral.
+*/
+
+header h2 {
+	font-weight: 100;
+}
+
+header > h2 {
+	font-weight: 600;
+}
+h2 + p{ /* afetando apenas o adjacente */
+	background: #FF0;
+	color:#333 ;
+} 
+
+h2 ~ h5{ /* afetando o que vem após*/
+	font-size: 1.2rem;
+}
+
+div ~ p{
+	text-transform: uppercase;
+}
+
+/* Pseudo-elementos*/
+
+
+a{
+	color: #555;
+	text-decoration: none;
+	font-size: 1.5rem;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+a:visited{
+	color: #F00;
+}
+
+a:hover{
+	color: #009;
+	background: #eee;	
+}
+
+a:active{
+	color: #0f0;
+	
+}
+
+h2:hover{
+	color: #888;
+}
+
+/*
+
+	Tipografia
+
+
+
+*/
+
+html{
+	font-family: sans-serif;
+
+}
+
+
+h1,h2,h3{	
+	font-weight: 600; /* podemos usar numeros ao inves de bold, thin, normal */
+	font-family: 'Limelight', cursive;
+
+}
+
+p{
+	font-weight: normal;
+	font-size: 1.4rem;
+}
+
+ul{
+	padding-left: .5rem;
+	margin-left: .5rem;
+}
+
+li {
+	letter-spacing: .01rem;
+	font-family: sans-serif;
+	line-height: 1.5;
+	
+}
+
+h3 {
+	font: italic bold 1.2rem/2 sans-serif ;/* definindo de forma reduzida, muda pra italico e bold,
+	 depois do tamanho tem a altura da font */
+}
+
+/*
+
+	Cores
+
+
+*/
+
+body{
+	background: url(../images/pattern.png);/* dois pontos retornam um diretorio, foi do css pro modulo 7*/
+	/* imagens se repetem por padrao, pra nao se repetir, use no-repeat */
+	background: url(../images/matrix.png) center top no-repeat;
+	/* da pra posicionar imagens usando tags como center, top e bottom */
+	background: url('../images/matrix.png') center top no-repeat #000000;
+	background: url(../images/pattern.png) center top repeat #EEE;
+}
+
+section{
+	background: rgba(255, 255, 255, .75);/* criou um fundo com opacidade alta pro pattern nao ficar tão forte */
+}
+
+p {
+	color: blue; /* voce pode escrever o nome da cor que o navegar e o sublime conseguem traduzir elas, porem sem precisão */
+	color: #034589;
+}
+
+header,footer{
+	background: #034589;
+}
+
+footer p {
+
+	color: rgb(255, 255, 255);
+}
+
+.navegacao{
+	background-color: rgba(0, 0, 0, .5);
+	padding: .5rem;
+}
+
+.navegacao li a{
+	color: white;
+	font-size: 1.4rem;
+}
+
+.navegacao li a:hover{
+	background-color: rgba(150, 150, 200, .5);
+	color: #333;
+}

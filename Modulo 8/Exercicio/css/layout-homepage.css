@@ -1,0 +1,119 @@
+/* 
+
+	Arquivo CSS geral com estilos dos elementos de todas páginas 
+
+*/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+      margin: 0;
+      padding: 0;	
+      font-size: 62.5%; /* equivalente a 10px */
+  }
+  
+  body {
+      
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 5pxw;
+  }
+
+  header {
+    background-color: #9191d1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+  article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    font-size: 1.6rem;
+  }
+  
+  h1 {
+      font-size: 2rem;
+  }
+  
+  h2 {
+      font-size: 2.6rem;
+      margin-bottom: .8rem;
+      margin-top: .8rem;
+  }  
+  
+  form {
+      background: #ca9636;
+      padding: 10px;
+      border-radius: 1%;
+  }
+  
+  form div {
+      background: #FBF8F1;
+      border-bottom: 1px solid #1d1405;
+      margin: 1rem;
+      padding: 2rem;
+  }
+  
+  label {
+      margin-bottom: 1rem;
+      font-size: 1.4rem; 
+      font-family: sans-serif;
+      font-weight: bold;
+      color: #876445;
+  }
+  
+  input {
+      padding: 1rem;
+  }
+  
+  [type="text"], [type="email"], textarea, label {
+      display: block;
+      width: 100%;
+  }  
+  
+  
+  nav {
+    float: left;
+    width: 25%;
+    height: 70vh;
+    background: #ca9636;
+    padding: 35px;
+    border-radius: 2%;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  
+  
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  footer {
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  section{
+      height: 70%;
+  }
+
+  
+  

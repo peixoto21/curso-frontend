@@ -1,0 +1,158 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+	<head>	
+		<title>HTML - Layouts</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>{
+
+			 box-sizing: border-box;
+
+			}
+
+
+
+			body {
+
+			 font-family: Arial, Helvetica, sans-serif;
+
+			}
+
+
+
+			/* Style the header */
+
+			header {
+
+			 background-color: #666;
+
+			 padding: 30px;
+
+			 text-align: center;
+
+			 font-size: 35px;
+
+			 color: white;
+
+			}
+
+
+
+			/* Create two columns/boxes that floats next to each other */
+
+			nav {
+
+			 float: left;
+
+			 width: 30%;
+
+			  
+
+			 background: #ccc;
+
+			 padding: 20px;
+
+			}
+
+
+
+			/* Style the list inside the menu */
+
+			nav ul {
+
+			 list-style-type: none;
+
+			 padding: 0;
+
+			}
+
+
+
+			article {
+
+			 float: left;
+
+			 padding: 20px;
+
+			 width: 70%;
+
+			 background-color: #f1f1f1;
+
+			}
+
+
+
+			/* Clear floats after the columns */
+
+			section::after {
+
+			 background: #ccc;
+
+			 content: "";
+
+			 display: table;
+
+			 clear: both;
+
+			}
+
+
+
+			/* Style the footer */
+
+			footer {
+
+			 background-color: #777;
+
+			 padding: 10px;
+
+			 text-align: center;
+
+			 color: white;
+
+			}
+
+
+
+			/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+
+			@media (max-width: 600px) {
+
+			 nav, article {
+
+			  width: 100%;
+
+			  height: auto;
+
+			 }
+
+			}
+
+			</style>
+	<body >	
+		<header>
+			<h2>Título da página</h2>
+		</header>
+
+		<section>
+			<nav>
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#sobre">Sobre</a></li>
+					<li><a href="./Modulo 4-Aula 2.html">Contato</a></li>
+				</ul>
+			</nav>
+
+			<article>
+				<h1>Título Artigo</h1>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend dignissim lorem. Duis nec lacus tellus. Etiam non euismod est. Nulla feugiat nisi sed elit convallis imperdiet. Aliquam tristique elit nec eros mattis scelerisque. Integer ultrices erat augue, quis posuere diam mattis ac. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eleifend lobortis tellus, et feugiat quam pulvinar non. Suspendisse potenti. Vivamus tempor tortor quis semper commodo. Etiam lobortis vestibulum nulla, luctus posuere augue congue vitae. Mauris vestibulum ligula id eros semper, eu venenatis augue semper. Nunc tristique dolor non eleifend sollicitudin. In sed molestie odio, et egestas lorem. Etiam massa sapien, accumsan et volutpat sit amet, interdum vitae dolor.</p>
+
+				<p>Nulla cursus consequat orci eget porttitor. Suspendisse ornare, metus a posuere bibendum, lorem elit tempor tellus, sit amet consectetur velit purus non magna. Phasellus lectus lectus, vehicula eget congue at, mollis ut nisi. Fusce tempus ut leo in rutrum. Nam id tellus nisi. Nunc aliquam ante eu eros dictum vehicula. In orci sapien, rutrum in porta sed, varius ut nibh. Proin porta congue pretium. Vivamus leo magna, mollis ut fringilla at, auctor lobortis tellus. Donec ac leo a erat imperdiet fringilla. Integer et erat vitae nibh lacinia vehicula. Praesent lacinia sem nisl, sit amet auctor risus suscipit non. Pellentesque eget orci auctor, varius libero ac, luctus urna. Suspendisse vehicula iaculis tristique. Nullam sit amet imperdiet ante, ut gravida mauris. Nam efficitur eleifend risus, nec vestibulum nibh faucibus sed.</p>
+			</article>
+		</section>
+		<footer>
+			<p>Desenvolvido por Victor</p>
+		</footer>
+	</body>
+</html>

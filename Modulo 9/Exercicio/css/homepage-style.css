@@ -1,0 +1,258 @@
+/* 
+
+	Herança
+
+	1. Sobreposição / Sobrescreve
+	2. Aplica a último estilo definido
+	3. Prioriza estilo específicas (com seletores mais próximos)
+	4. Se aplica a todas as propriedades
+
+ */
+
+
+ html {
+	font-family: sans-serif;
+	color: #454545;
+}
+
+p {
+	color: #454545;
+}
+
+header p {
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+
+/* 
+
+	Combinadores 
+	
+	(espaço) seletor descendente 
+	(>) combinador de seletores filhos
+	(+) combinador de elementos irmãos adjacentes / que vem logo na sequencia
+	(~) combinador de elementos irmãos geral / após elemento de referência
+
+	
+*/
+
+
+header h2 {
+	font-weight: 600;
+	
+    font-size: 55px;    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header a{
+    display: inline;
+}
+
+div ~ p {
+	text-transform: uppercase;
+}
+
+
+/* Pseudo-classes */
+
+a {
+	color: #363636;
+	text-decoration: none; /* o padrão é underline */
+	font-size: 1.8rem;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+
+
+nav a:hover {
+	color: #006a25;
+	background: #FBF8F1;
+}
+a:visited {
+	color: #54BAB9;
+	font-style: italic;
+}
+/* 
+	Tipografia
+*/
+
+html {
+	font-family: sans-serif;
+}
+
+h1, h2, h3 {
+	font-weight: 400;
+	font-family: 'Limelight', cursive;
+}
+
+p {
+	font-weight: normal;
+	font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
+ul {
+	padding-left: .5rem;
+	margin-left: .5rem;	
+}
+
+li {
+	letter-spacing: 0.01rem;
+	font-family: sans-serif;
+	line-height: 1.5;
+}
+
+h3 {
+	/* declaração resumida / completa */
+	font: italic bold 2.2rem/2 sans-serif;
+    margin: 5px 0;
+    
+}
+
+/* 
+
+	Cores
+
+*/
+
+body {
+	
+	background: url('../images/pattern.png') center top repeat #F4DFBA;
+	
+	
+    
+}
+
+section {
+	background: linear-gradient(#F4DFBA,#F4DFBA,#e9d2ab);
+    
+}
+
+p {
+	
+	color: #876445;
+}
+
+header,
+footer {
+	background-color: rgba(135, 100, 69, 0.95);
+}
+
+article h2{
+	color: #3b2a1a;
+}
+
+footer p {
+	color: rgb(255, 255, 255);
+	font-family: serif;
+}
+
+.navegacao {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 0.5rem;
+}
+
+.navegacao li a {
+	color: white;
+	font-size: 1.4rem;
+}
+
+.navegacao li a:hover {
+	background-color: rgba(150, 150, 200, .5);
+	color: #333333;
+}
+
+#ivideo{
+	margin-top: 10px;
+	filter: drop-shadow(0px 1px 1px #333);
+}
+
+  /* filtros */
+#profile{
+	border-radius: 50%;
+	border: solid;
+	border-color: #FBF8F1;
+	border-width: 1rem;
+	filter: saturate(55%) sepia(100%) brightness(115%) contrast(110%) drop-shadow(2px 2px 1px rgba(30,30,30,50%)) ;
+
+}
+
+#profile:hover{
+	filter: none;
+}
+#grafico-01{
+    filter: drop-shadow(8px 8px 8px #333);
+}
+
+#imagem-vetorial{
+    filter: drop-shadow(8px 8px 8px #333);
+}
+#contorno-nav{
+	background: linear-gradient(#F4DFBA,#F4DFBA,#e9d2ab);
+	height: 100%;
+	padding: 0 10px;
+	border-radius: 2%;
+	border: dashed;
+	border-color: #755231;
+}
+
+
+
+
+
+/* Break points */
+
+@media(max-width:768px){
+  
+    nav {
+      width:35vw;
+    }
+  
+    article{
+      width: 65vw;
+    }
+  
+    header h2{
+      font-size: 50px;
+      }
+
+	#ivideo{
+		width: 100%;
+	}
+  }
+
+
+  @media(max-width:425px){
+  
+    nav {
+      width:100%;
+	  height: auto;
+    }
+	
+
+    article{
+      width: 100%;
+    }
+  
+
+
+     header h2{
+    font-size: 45px;
+    }
+	#ivideo{
+		width: 100%;
+	}
+  
+  }
+
+  @media(max-height:425px){
+	#contorno-nav{
+		height: auto;
+	}
+	nav{
+		height: auto;
+	}
+  }
