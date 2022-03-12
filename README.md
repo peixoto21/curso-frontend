@@ -48,5 +48,19 @@ são ramificações do código / versões paralelas
 git checkout -b "nome da branch" (cria uma branch)
 git checkout "nome da branch" (muda para aquela branch)
 
+
 ### Merge
 Mescla de branchs
+Você pode precisar resolver conflitos manualmente
+
+git merge main
+
+### Pull Request
+Mescla de branchs no repositório
+Permite code review
+o repositório resolve os conflitos automaticamente
+
+
+### confirgura o Gitflow
+git flow init
+git flow feature start "nome-da-feature/nova-branch"
