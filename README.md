@@ -1,4 +1,4 @@
-# Curso-Frontend
+# Curso Front-end
 #### EBAC
 
 # GIT
