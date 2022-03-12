@@ -46,5 +46,8 @@ são ramificações do código / versões paralelas
 -versionamento (versões do codigo para controle de atualização)
 -versão 0.2.11 (nivel de versão principal,atualização daquela versão, correção de bugs)
 
+git checkout -b "nome da branch" (cria uma branch)
+git checkout "nome da branch" (muda para aquela branch)
+
 ### Merge
 Mescla de branchs
