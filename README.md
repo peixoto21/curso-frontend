@@ -27,7 +27,7 @@ Informação de alteração
 - após testado todo seu código
 - git add *
 - git commit -m "mensagem"
-- git push (enviar alterações para o repositório)
+- git push (enviar alterações para o repositório Github)
 - git pull (puxar / trazer alterações do Github para sua maquina)
 =======
 - após testado todo seu codigo
@@ -36,3 +36,18 @@ Informação de alteração
 
 ## GitFlow
 Fluxo do Git
+
+### Branchs
+são ramificações do código / versões paralelas
+
+-main / master (principal, a raiz e a que deve permanecer funcional)(quando o projeto é publicado)
+-develop (uma branch separada para ser usada enquanto o código está sendo desenvolvido, não afetando a principal)
+-DOD Definition of Done: critério de aceite
+-versionamento (versões do codigo para controle de atualização)
+-versão 0.2.11 (nivel de versão principal,atualização daquela versão, correção de bugs)
+
+git checkout -b "nome da branch" (cria uma branch)
+git checkout "nome da branch" (muda para aquela branch)
+
+### Merge
+Mescla de branchs
