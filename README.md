@@ -24,6 +24,7 @@ Arquivo B │  Versão 1 │ Versão 2
 ## Commits
 Informação de alteração
 - após testado todo seu codigo
+- teste para o pull
 
 ## GitFlow
 Fluxo do Git
