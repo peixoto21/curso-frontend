@@ -45,3 +45,6 @@ são ramificações do código / versões paralelas
 -DOD Definition of Done: critério de aceite
 -versionamento (versões do codigo para controle de atualização)
 -versão 0.2.11 (nivel de versão principal,atualização daquela versão, correção de bugs)
+
+### Merge
+Mescla de branchs
