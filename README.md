@@ -29,7 +29,6 @@ Informação de alteração
 - git commit -m "mensagem"
 - git push (enviar alterações para o repositório Github)
 - git pull (puxar / trazer alterações do Github para sua maquina)
-
 - após testado todo seu codigo
 - teste para o pull
 
