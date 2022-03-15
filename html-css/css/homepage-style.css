@@ -181,7 +181,7 @@ footer p {
 }
 
 #profile:hover{
-	filter: none;
+	filter: drop-shadow(2px 2px 1px rgba(30,30,30,50%)) ;
 }
 #grafico-01{
     filter: drop-shadow(8px 8px 8px #333);
@@ -208,7 +208,7 @@ footer p {
 @media(max-width:768px){
   
     nav {
-      width:35vw;
+      width:33vw;
     }
   
     article{
@@ -222,6 +222,9 @@ footer p {
 	#ivideo{
 		width: 100%;
 	}
+
+
+
   }
 
 
@@ -232,12 +235,21 @@ footer p {
 	  height: auto;
     }
 	
+	div p{
+		font-size: 1.2rem;
+	}
+
+	input[type="radio" i] {
+		margin: 0;
+	}
 
     article{
       width: 100%;
     }
   
-
+	#contorno-nav{
+		padding-bottom: 7px;
+	}
 
      header h2{
     font-size: 45px;

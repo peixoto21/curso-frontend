@@ -17,7 +17,7 @@
   body {
       
       font-family: Arial, Helvetica, sans-serif;
-      margin: 5pxw;
+      margin: 5px;
   }
 
   header {
@@ -32,6 +32,7 @@
     padding: 20px;
     width: 70%;
     font-size: 1.6rem;
+    text-align: center;
   }
   
   h1 {
