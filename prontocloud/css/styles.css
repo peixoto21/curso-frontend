@@ -28,6 +28,14 @@ body{
     /* max-width: 1198px; */
 }
 
+.container-nav{
+    display: block;
+    float: left;
+    width: 29%;
+}
+#sec-first{
+    padding-top: 10px;
+}
 header{
     display: block;
     float: left;
@@ -47,6 +55,7 @@ h2{
     font-size: 2rem;
     color: #254159;
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 h3{
@@ -105,14 +114,14 @@ section{
     display: block;
     float: left;
     width: 100%;
-    padding: 20px 0;
+
 }
 
 section nav{
     display: block;
     float: left;
-    width: 30%;
-
+    width: 100%;
+    padding: 20px 0 20px 10px;
 }
 
 nav li{
@@ -163,4 +172,19 @@ footer small{
 .cognito {
     height: 400px !important;
     overflow: hidden !important;
+}
+
+@media(max-width: 425px){
+    section nav,section article{
+        width: 100%;
+    }
+    .container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .container-nav{
+        width: 96%;
+    }
+
+
 }
