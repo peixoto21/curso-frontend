@@ -14,7 +14,7 @@ body{
 
 .main-container{
     display: block;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
 
 }
@@ -22,17 +22,18 @@ body{
 .container{
     display: block;
     float: left;
-    padding: 20px 0px 20px 0px;
-    width: 100%;
+    padding: 20px;
+    max-width: 100%;
     margin: 0 auto;
+    /* max-width: 1198px; */
 }
 
 header{
     display: block;
     float: left;
-    width: 100vw;
+    width: 100%;
     background: white;
-    padding: 20px;
+    padding: 20px 0;
     border-bottom: 1px solid #254159;
 }
 
@@ -68,8 +69,24 @@ p{
     color: #333;
 }
 img{
-    
+    max-width:100%;
+    height: auto;
 }
+
+#tenho-interesse {
+    background-color: #b8c8d6;
+    width: 100%;
+}
+
+#tenho-interesse form,
+:root:root:root:root .cog-cognito--styled, :root:root:root:root .cog-cognito--styled div{
+    background-color: #b8c8d6 !important;
+}
+
+#tenho-interesse .cognito .c-forms-form .c-forms-form-title h2, :root:root:root:root .cog-cognito--styled div,#tenho-interesse .cognito label[for], .cognito input[type=radio], .cognito input[type=checkbox] {
+    color: #385874;
+}
+
 
 li{
     margin-bottom: 10px;
@@ -87,14 +104,14 @@ section{
     font-size: 1.5rem;
     display: block;
     float: left;
-    width: 100vw;
-    padding: 20px;
+    width: 100%;
+    padding: 20px 0;
 }
 
 section nav{
     display: block;
     float: left;
-    width: 25%;
+    width: 30%;
 
 }
 
@@ -127,11 +144,10 @@ section article{
 
 footer{
     background-color: #254159;
-    color: white;
     display: block;
     float: left;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 footer p {
