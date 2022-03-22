@@ -33,4 +33,9 @@
 - Criar formulários para captação de e-mails
 - Post para redes sociais: texto + foto + url curta
 - Incluir hospedagem (servidor web) 
-- Git - histórico de evolução (commits detalhados)
+- Git - histórico de evolução (commits detalhados)]
+
+## URL
+Uniforme Resource Locator
+
+- URL amigável: humanos e mecanismos de busca

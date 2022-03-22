@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
 
 
 html{    
@@ -45,18 +45,15 @@ body{
     width: 29%;
 }
 
-
-
-
 #sec-first{
     padding-top: 10px;
 }
+
 header{
     display: block;
     float: left;
     width: 100%;
     background: white;
-    padding: 20px 0;
     border-bottom: 1px solid #254159;
 }
 
@@ -241,11 +238,13 @@ footer small{
     border-radius: 5px;
     background-color: rgba(255, 255, 255, .6);
     margin-bottom: 5rem;
+    line-height: 2rem;
 
 }
 
 .legenda h5, .legenda h4{
     color: #254159;
+    font-size: 1.3rem;
 
 }
 
@@ -264,17 +263,40 @@ footer small{
     float: right;
 }
 
+.container-legenda .button-cta{
+    float: left;
+}
+
+.mais-left{
+    margin-left: 40px !important;
+}
+
 #saiba-mais{
     background-color: #eaeff3;
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 #saiba-mais p,#saiba-mais img{
     width: 45%;
     display: block;
     float: left;
-    padding: 20px;
+    padding: 0 20px;
+    font-weight: 500;
 }
+
+#duvidas{
+    padding-top: 0px;
+}
+
+.tira-top{
+    padding-top: 0px !important;
+}
+
+#planejamento-interesse{
+    float: left;
+    font-size: 1.6rem;
+}
+
 
 dl{
     margin: 20px 0;
