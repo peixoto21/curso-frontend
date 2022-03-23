@@ -127,6 +127,8 @@ section{
     display: block;
     float: left;
     width: 100%;
+    padding:  20px 0;
+    align-content: center;
 
 }
 
@@ -280,7 +282,7 @@ footer small{
     width: 45%;
     display: block;
     float: left;
-    padding: 0 20px;
+    padding-right:20px;
     font-weight: 500;
 }
 
@@ -313,4 +315,52 @@ dd{
     margin-left: 20px;
     margin-bottom: 20px;
     font-size: 1.4rem;
+}
+
+@media(max-width:768px){
+
+    #saiba-mais p,#saiba-mais img{
+        width: 47.1%;
+    }
+
+    .tira-top{
+        position: relative;
+        left: 47%;
+    }
+    .tablet-center{
+        float: left;
+        position: relative;
+        left: 29%; 
+        width: 500px;   
+    }
+    .mais-left{
+        margin: 0 !important;
+    }
+}
+
+@media(max-width:430px){
+    .tablet-center{
+        float: left;
+        position: relative;
+        left: 0%; 
+        width: auto;   
+    }
+    #saiba-mais p,#saiba-mais img{
+        width: 95%;
+        padding-bottom: 20px;
+    }
+    .tira-top{
+        width: auto !important;
+    }
+    #banner{
+        height: auto;        
+    }
+    .legenda-container{
+        width: 50vw;
+        float: right;
+        margin: 10vh 0vh 25vh 0vh;
+    }
+    .tira-top{
+        left: 0;
+    }
 }
