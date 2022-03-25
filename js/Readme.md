@@ -11,7 +11,7 @@
 - \c.De qualquer outra forma o percurso continua
 - 9-Declarar que se Homem,Lobo,Cabra e Alfafa estiverem em Terra2, a Travessia acabou
 
-##Resolução:
+## Resolução:
 
 - 1-Adcionar Homem no Barco
 - 2-Adcionar Cabra no Barco
