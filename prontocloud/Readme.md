@@ -34,3 +34,9 @@
 - Post para redes sociais: texto + foto + url curta
 - Incluir hospedagem (servidor web) 
 - Git - histórico de evolução (commits detalhados)
+
+## URL
+Uniforme Resource Locator
+
+- URL amigável: humanos e mecanismos de busca
+- https://bityli.com/BQJmK
