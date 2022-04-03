@@ -104,9 +104,12 @@ function validaCampoNumerico(elemento){
 
         event.preventDefault();
 
-        let numero = this.value.match(/^[\d]5-[\d]3/) ? this.value.replace(/-/, "") : this.value; 
+        // const numeroValido = /^[0-9]*$/; 
+        // const digitosInvalidos = e;
 
-        if(numero != "" && numero.match(/[0-9]*/) && numero >= 0 && numero <= 10){
+        let numero = this.value.match(/^[\d]5-[\d]3/) ? this.value.replace(/-/, "") : this.value; 
+      
+        if(numero != "" && numero.match(/[0-9]*/) && numero >= 0){
             document.querySelector('.mensagem').innerHTML = "";
             this.classList.remove('erro');
             this.parentNode.classList.remove('erro');
@@ -128,9 +131,9 @@ function validaEmail(elemento){
 
         event.preventDefault();
 
-        const emailValido = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+        const emailValido = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@+[a-zA-Z0-9]+\.[a-zA-Z0-9]+(\.[a-z]+)?/i;
 
-        if(this.value.match(emailValido)) {
+        if(emailValido!="" && this.value.match(emailValido)) {
             document.querySelector('.mensagem').innerHTML = "";
             this.classList.remove('erro');
             this.parentNode.classList.remove('erro');
@@ -168,11 +171,35 @@ function validaCampoUf(elemento){
         }
     )};
 
+    function validaCampoCidade(elemento){
+
+        elemento.addEventListener('focusout', function(event) {
+    
+            event.preventDefault();
+    
+            const ufValido = /^[0-9]/;
+    
+            if(!this.value.match(ufValido)) {
+                document.querySelector('.mensagem').innerHTML = "";
+                this.classList.remove('erro');
+                this.parentNode.classList.remove('erro');
+            } 
+            else {
+                document.querySelector('.mensagem').innerHTML = "verifique o preenchimento dos campos em destaque";
+                this.classList.add('erro');
+                this.parentNode.classList.add('erro');
+                return false;
+            }
+    
+            }
+        )};
+
 
 let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
 let camposNumericos = document.querySelectorAll('input.numero');
 let camposEmail = document.querySelectorAll('input.email');
 let camposUf = document.querySelectorAll('input.uf')
+let camposCidade = document.querySelectorAll('input.cidade')
 
 for( let emFoco of camposObrigatorios) {
     validaCampo(emFoco);
@@ -189,3 +216,36 @@ for( let emFoco of camposEmail) {
 for(let emFoco of camposUf) {
     validaCampoUf(emFoco);
 }
+
+for(let emFoco of camposCidade) {
+    validaCampoCidade(emFoco);
+}
+
+function checkInputs(inputs) {
+    var filled = true;
+    
+    inputs.forEach(function(input) {
+        
+      if(input.value === "") {
+          filled = false;
+      }
+    
+    });
+    
+    return filled;
+    
+  }
+
+var inputs = document.querySelectorAll("input");
+var button = document.querySelector("button");
+inputs.forEach(function(input) {
+    
+  input.addEventListener("keyup", function() {
+    if(checkInputs(inputs)) {
+      button.disabled = false;
+    } else {
+      button.disabled = true;
+    }
+  });
+});
+
