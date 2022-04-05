@@ -43,6 +43,7 @@ function contagemRegressiva(numero){
  * Formulário envio de dados para cálculo da média 
  */
 const formulario1 = document.getElementById('formulario-01');
+const formulario2 = document.getElementById('formulario-02');
 
 if(formulario1)
     formulario1.addEventListener('submit', function( evento ){
@@ -183,23 +184,35 @@ function validaCampoUf(elemento){
                 document.querySelector('.mensagem').innerHTML = "";
                 this.classList.remove('erro');
                 this.parentNode.classList.remove('erro');
+
             } 
             else {
                 document.querySelector('.mensagem').innerHTML = "verifique o preenchimento dos campos em destaque";
                 this.classList.add('erro');
                 this.parentNode.classList.add('erro');
+
                 return false;
             }
     
             }
         )};
 
+    // function validaErro(elemento){
+    //     elemento.addEventListener('focusout', function(event) {
+    
+    //         event.preventDefault();
+
+
+            
+    // })
 
 let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
 let camposNumericos = document.querySelectorAll('input.numero');
 let camposEmail = document.querySelectorAll('input.email');
 let camposUf = document.querySelectorAll('input.uf')
 let camposCidade = document.querySelectorAll('input.cidade')
+let campoErro = document.querySelectorAll('input.erro');
+
 
 for( let emFoco of camposObrigatorios) {
     validaCampo(emFoco);
@@ -236,16 +249,20 @@ function checkInputs(inputs) {
     
   }
 
-var inputs = document.querySelectorAll("input");
-var button = document.querySelector("button");
-inputs.forEach(function(input) {
-    
-  input.addEventListener("keyup", function() {
-    if(checkInputs(inputs)) {
-      button.disabled = false;
-    } else {
-      button.disabled = true;
-    }
-  });
-});
+  let camposTodos= formulario2.querySelector('.error')
 
+  var inputs = document.querySelectorAll("input");
+  var button = document.querySelector("button");
+  inputs.forEach(function(input) {
+      
+    input.addEventListener("focusout", function() {
+
+       
+      
+      if(checkInputs(inputs)&& !formulario2.children[1].classList.contains('erro')&& !formulario2.children[2].classList.contains('erro')&& !formulario2.children[3].classList.contains('erro')&& !formulario2.children[4].classList.contains('erro')&& !formulario2.children[5].classList.contains('erro') && !formulario2.children[6].classList.contains('erro')) {
+        button.disabled = false;
+      } else {
+        button.disabled = true;
+      }
+    });
+  });
