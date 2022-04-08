@@ -1,6 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+header{
+    /* background: url("../images/wm_14.png") center top repeat #f7dbaa; */
+    background: linear-gradient(to right,#f7dbaa,#fcd071);
+    background:#fcd071;
+    border-bottom: solid #695025;
+    border-width: 2px;
+}
+
+h1{
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-weight: 700;
+    color: #695025;
+}
+
+li a{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;    
+}
+
+.nav-link{
+    color: #695025;
+    font-size: 1.2rem;
+
+}
+
+div p{
+    margin-bottom: 1.5rem;
+}
+.btn-success{
+    background-color: #695025;
+    border-color: #695025;
+}
+.btn-success:hover{
+    background-color: #533e1a;
+    border-color: #533f1b;
+}
+.btn-success:active,.btn-success.active,.btn-success:focus,.btn-success.active:focus,.btn-success:active:focus,.btn-success.dropdown-toggle:focus,.btn-success.disabled,.btn-success:disabled{
+    background-color: #533e1a;
+    border-color: #533f1b;
+    box-shadow: #7c6d59;
+}
+
+body{
+    background: url(../images/wm_15.png) #f7dbaa ;
+}
+.more-margin-bot{
+    margin-bottom: 4rem;
+}
+
+.more-margin-top{
+    margin-top: 3rem;
+}
+
+.crop01{
+    overflow: hidden;
+    height:550px;
+    border: dashed #533e1a;
+    padding: 0;
+
+}
+
+.crop02{
+    height:350px;
+    object-fit: cover;
+}
+
 section{
     padding-top: 4rem;
     padding-bottom: 4rem;
+    border-bottom: dashed #695025;
+    border-width: 2px;
+    
+}
+
+#sobre,#contato{
+    background: rgb(255, 248, 237);
+}
+
+#produtos{
+    background:  rgba(247, 219, 170,100);
 }
 
 input,textarea{
@@ -12,4 +91,40 @@ input,textarea{
     /* width: 32%; */
     float: left; 
     margin: 5px;
+    border: dashed;
+    border-width: thin;
+    border-color: #695025;
+}
+
+.card-body{
+    border-top: dashed;
+    border-width: 2px;
+    border-color: #695025;
+}
+.btn-primary{
+    background-color: rgb(136, 54, 7);
+    border-color: rgb(92, 36, 3);
+}
+.btn-primary:hover,.btn-primary:active,.btn-primary.active,.btn-primary:focus,.btn-primary.active:focus,.btn-primary:active:focus,.btn-primary.dropdown-toggle:focus,.btn-primary.disabled,.btn-primary:disabled{
+    background-color: rgb(136, 54, 7);
+    border-color: rgb(92, 36, 3);
+}
+.btn-secondary{
+    background-color: #7c6d59;
+}
+
+.btn-secondary:hover,.btn-secondary:active{
+    background-color: #7c6d59;
+}
+
+h2{
+    color: #695025;
+}
+.no-margin-bot{
+    margin-bottom: 0;
+}
+
+
+legend,h5{
+    margin-bottom: 2rem;
 }
