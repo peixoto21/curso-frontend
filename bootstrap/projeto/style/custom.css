@@ -56,7 +56,7 @@ body{
 
 .crop01{
     overflow: hidden;
-    height:550px;
+    height:650px;
     border: dashed #533e1a;
     padding: 0;
 
@@ -128,4 +128,50 @@ h2{
 
 legend,h5{
     margin-bottom: 2rem;
+}
+
+@media(max-width:1400px){
+    .crop01{
+        height: 600px;
+    }
+    
+}
+
+@media(max-width:1200px){
+    .crop01{
+        height: 550px;
+    }
+    
+}
+
+@media(max-width:770px){
+    .crop01{
+        height: auto;
+    }
+    .card{
+        width: 46%;
+    }
+}
+
+@media(max-width:430px){
+    .card{
+        width: 100%;
+    }
+    .nav-link {
+        padding: 0.5rem 0.4rem;
+        font-size: 1.4rem;
+    }
+    #sobre .btn-success{
+        margin-bottom: 40px;
+    }
+    .crop01{
+        height: auto;
+    }
+
+}
+@media(max-width:320px){
+    .nav-link {
+        padding: 0.5rem 0.4rem;
+        font-size: 1.2rem;
+    }
 }
