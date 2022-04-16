@@ -153,6 +153,10 @@ legend,h5{
     .justify-content-end{
         justify-content:flex-start!important
     }
+    .card{
+        width: 31.8%;
+        height: auto;
+    }
 
 }
 
@@ -165,7 +169,7 @@ legend,h5{
         object-fit: cover;
     }
     .card{
-        width: 31.8%;
+        width: 31.3%;
         height: 90%;
     }
 }
