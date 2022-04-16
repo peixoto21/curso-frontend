@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="./libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="./libs/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./libs/fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="./libs/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./libs/fontawesome/css/">
     <link rel="stylesheet" href="./style/custom.css">
 
     <title>Document</title>
@@ -36,13 +41,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 col-sm-12">
-                    <h2>Sobre nós</h2>
+                    <h2>Sobre nós <i class="fa-regular fa-face-laugh-wink"></i></h2>
+                    
                     <p>O CodeCoffe é o melhor local para dar aquela pausinha e tomar o café da tarde. Desde um expresso até um fraputino, nossa prioridade é te aquecer naquelas tardes mais cinzas. Também experimente nosso produtos de padaría </p>
                     <p class="more-margin-bot">Aproveite a estadía para também usufruir do local, com espaço Wi-Fi aconchegante o CodeCoffe é um ótimo lugar para mudar sem ambiente de trabalho.</p>
                     <a class="btn btn-lg btn-success" href="#contato">Veja os locais mais proximos!</a>
                 </div>
-                <div class="col-md-5 col-sm-12 crop01">
-                    <img src="./images/pexels-pavel-danilyuk-6612674.jpg" alt="Imagem exemplo" class="img-fluid">
+                <div class="col-md-5 col-sm-12 crop01 overflow-hidden">
+                    <div class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active " data-bs-interval="5000">
+                                <img src="./images/pexels-pavel-danilyuk-6612674.jpg" alt="Imagem exemplo1" class="img-fluid">
+                            </div>
+                            <div class="carousel-item overflow-hidden " data-bs-interval="5000">
+                                <img src="./images/bulletproof-coffee-recipe-5-of-9-650x1001.webp" alt="Imagem exemplo2" class="img-fluid">
+                            </div>
+                            <div class="carousel-item overflow-hidden " data-bs-interval="5000">
+                                <img src="./images/Breve-Coffee-003.jpg" alt="Imagem exemplo3" class="img-fluid">
+                            </div>
+                    </div>
                 </div>
 
             </div>
@@ -54,7 +71,7 @@
             <div class="row">
                 <div class="col">
 
-                    <h2>Nossos Produtos</h2>
+                    <h2>Nossos Produtos <i class="fa-solid fa-mug-hot"></i></h2>
 
                     <div class="card">
                         
@@ -94,30 +111,66 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <h2>Locais de lojas</h2>
+                    <h2>Locais de lojas <i class="fa-solid fa-house"></i></h2>
                     <h6 class='more-margin-bot'>Você pode nos encontrar nos seguintes locais:</h6>
-                    <p class="no-margin-bot">(Bairro Norte)</p>
+                    <p class="no-margin-bot"><i class="fa-regular fa-building"></i> (Bairro Norte)</p>
                     <p>Rua Norte da Cidade, 256</p>
-                    <p class="no-margin-bot">(Bairro Sul)</p>
+                    <p class="no-margin-bot"><i class="fa-solid fa-building"></i></i> (Bairro Sul)</p>
                     <p>Rua Sul da Cidade, 128</p>
-                    <p class="no-margin-bot">(Bairro Leste)</p>
+                    <p class="no-margin-bot"><i class="fa-regular fa-building"></i> (Bairro Leste)</p>
                     <p>Av. Leste, altura 1520</p>
-                    <p class="no-margin-bot">(Bairro Oeste)</p>
+                    <p class="no-margin-bot"><i class="fa-solid fa-building"></i></i> (Bairro Oeste)</p>
                     <p>Praça Santo Oeste, 546</p>
                 </div>
                 <div class="col-md-6 col-sm-12 more-margin-top">
                     <h5>Quer entrar em contato? Nos mande uma mensagem!</h5>
                     <form class="form" id="formulario" >
                         <legend>Insira suas informações</legend>
-                        <div class="input-group">
-                            <input class="form-control" type="text" name="nome" placeholder="digite seu nome" required>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="input-group">
+                                    <label class="col-12 col-form-label-sm" for="nome"><i class="fa-regular fa-address-card"></i> Nome Completo</label>
+                                    <input class="form-control col-sm-12" type="text" name="nome" id="nome" placeholder="digite seu nome" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="input-group">
+                                    <label class="col-12 col-form-label-sm" for="email"><i class="fa-regular fa-envelope"></i> Email Completo</label>
+                                    <input class="form-control col-sm-12" type="email" id="email" name="email" placeholder="digite seu email" required>
+        
+                                </div>
+                            </div>
                         </div>
-                        <div class="input-group">
-
-                            <input class="form-control" type="email" id="email" name="email" placeholder="digite seu email">
-
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <label class=" col-form-label-sm" for="endereco">Endereço Completo</label>
+                                <input type="text" class="form-control" placeholder="seu endereço aqui" name="" id="endereco" required>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <label class=" col-form-label-sm" for="bairro">Nome do bairro</label>
+                                <input type="text" class="form-control" placeholder="nome do bairro aqui" name="" id="bairro" required>
+                            </div>
                         </div>
-
+                        <div class="row">
+                            <div class="col">
+                                <label class=" col-form-label-sm" for="cidade">Cidade</label>
+                                <input type="text" name="cidade" id="cidade" placeholder="Nome da cidade" class="form-control" required>
+                            </div>
+                            <div class="col">
+                                <label class=" col-form-label-sm" for="cidade">Estado</label>
+                                <select name="estado" id="estado" class="form-control" required>
+                                    <option value="">Selecione um estado</option>
+                                    <option value="sp">SP</option>
+                                    <option value="al">AL</option>
+                                    <option value="mg">MG</option>
+                                </select>    
+                            </div>
+                            <div class="col">
+                                <label class=" col-form-label-sm" for="cidade">CEP</label>
+                                <input type="text" name="cep" id="cep" placeholder="Informe seu CEP" class="form-control" required>
+                            </div>
+                        </div>
+                        <label class=" col-form-label-sm" for="mensagem">Comentário:</label>
                         <div class="input-group">
                             <textarea class="form-control" id="mensagem" name=""rows="10" required></textarea>
                         </div>
@@ -257,7 +310,8 @@
 
 
 
-    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./add-script/custom-script.js"></script>
+    <script src="https://kit.fontawesome.com/053cdf94fb.js" crossorigin="anonymous"></script>
 </body>
 </html>
