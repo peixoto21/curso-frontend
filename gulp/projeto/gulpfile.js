@@ -1,19 +1,20 @@
-
 const gulp = require('gulp')
 const concat = require('gulp-concat')
 const cssmin = require('gulp-cssmin')
-const uglify = require('gulp-uglify')
 const rename = require('gulp-rename')
-const image = require('gulp-image')
+const uglify = require('gulp-uglify')
+// const image = require('gulp-image')
+const stripJs = require('gulp-strip-comments')
+const stripCss = require('gulp-strip-css-comments')
 
 function tarefasCSS(cb) {
 
     return gulp.src([
             './node_modules/bootstrap/dist/css/bootstrap.css',
-            './node_modules/@fortawesome/fontawesome-free/css/fontawesome.css',
             './vendor/owl/css/owl.css',
             './vendor/jquery-ui/jquery-ui.css',
-            './src/css/style.css'
+            './src/css/style.css',
+            './node_modules/@fortawesome/fontawesome-free/css/fontawesome.css'
         ])
         .pipe(stripCss())                   // remove comentários
         .pipe(concat('styles.css'))         // mescla arquivos
@@ -40,9 +41,30 @@ function tarefasJS(){
         .pipe(gulp.dest('./dist/js'))       // cria arquivo em novo diretório
 }
 
+gulp.task('icons', function() {
+    return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+        .pipe(gulp.dest('./dist/fonts'));
+});
 
-function tarefasImagem(){
+
+// function tarefasImagem(){
     
+//     return gulp.src('./src/images/*')
+//         .pipe(image({
+//             pngquant: true,
+//             optipng: false,
+//             zopflipng: true,
+//             jpegRecompress: false,
+//             mozjpeg: true,
+//             gifsicle: true,
+//             svgo: true,
+//             concurrent: 10,
+//             quiet: true
+//         }))
+//         .pipe(gulp.dest('./dist/images'))
+// }
+
+gulp.task('image',function(){
     return gulp.src('./src/images/*')
         .pipe(image({
             pngquant: true,
@@ -56,8 +78,8 @@ function tarefasImagem(){
             quiet: true
         }))
         .pipe(gulp.dest('./dist/images'))
-}
+})
 
 exports.styles = tarefasCSS
 exports.scripts = tarefasJS
-exports.images = tarefasImagem
+// exports.images = tarefasImagem
