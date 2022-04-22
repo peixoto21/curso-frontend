@@ -1,0 +1,18 @@
+   $('body').on('submit', '.modal-body .form', function(e){
+
+      e.preventDefault()
+
+      const inputName = $('#nome')
+      const inputEmail = $('#email')
+
+      validate(inputName)
+      validate(inputEmail)
+
+      if(inputEmail.hasClass('invalid') || inputName.hasClass('invalid')){
+         console.log('verificar campos obrigatórios')
+         return false
+      } else {
+         $(this).submit()  
+      }
+
+   })
