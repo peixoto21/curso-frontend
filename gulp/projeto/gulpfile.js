@@ -3,9 +3,12 @@ const concat = require('gulp-concat')
 const cssmin = require('gulp-cssmin')
 const rename = require('gulp-rename')
 const uglify = require('gulp-uglify')
-// const image = require('gulp-image')
+const imagemin = require('gulp-imagemin')
+const htmlmin = require('gulp-htmlmin')
 const stripJs = require('gulp-strip-comments')
 const stripCss = require('gulp-strip-css-comments')
+const { series, parallel } = require('gulp')
+
 
 function tarefasCSS(cb) {
 
@@ -42,44 +45,56 @@ function tarefasJS(){
 }
 
 gulp.task('icons', function() {
-    return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+    return gulp.src('./src/fonts/*')
         .pipe(gulp.dest('./dist/fonts'));
 });
 
+function tarefasIcons(){
+    return gulp.src('./src/fonts/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./dist/fonts'))
+}
 
-// function tarefasImagem(){
+function tarefasImagem(){
     
-//     return gulp.src('./src/images/*')
-//         .pipe(image({
-//             pngquant: true,
-//             optipng: false,
-//             zopflipng: true,
-//             jpegRecompress: false,
-//             mozjpeg: true,
-//             gifsicle: true,
-//             svgo: true,
-//             concurrent: 10,
-//             quiet: true
-//         }))
-//         .pipe(gulp.dest('./dist/images'))
-// }
-
-gulp.task('image',function(){
     return gulp.src('./src/images/*')
-        .pipe(image({
-            pngquant: true,
-            optipng: false,
-            zopflipng: true,
-            jpegRecompress: false,
-            mozjpeg: true,
-            gifsicle: true,
-            svgo: true,
-            concurrent: 10,
-            quiet: true
-        }))
+        .pipe(imagemin())
         .pipe(gulp.dest('./dist/images'))
-})
+}
+
+// gulp.task(import('image'), () => {
+//     gulp.src('./src/images/*')
+//       .pipe(image({
+//         pngquant: true,
+//         optipng: false,
+//         zopflipng: true,
+//         jpegRecompress: false,
+//         mozjpeg: true,
+//         gifsicle: true,
+//         svgo: true,
+//         concurrent: 10,
+//         quiet: true // defaults to false
+//       }))
+//       .pipe(gulp.dest('./dest/images'));
+//   });
+
+
+function tarefasHTML(callback){
+    return gulp.src('./src/**/*.html')        
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest('./dist'))
+
+    // return callback()    
+}
+
+gulp.task('minify', () => {
+    return gulp.src('src/*.html')
+      .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(gulp.dest('dist'));
+  });
+
 
 exports.styles = tarefasCSS
 exports.scripts = tarefasJS
+exports.default = parallel(tarefasCSS,tarefasJS,tarefasHTML,tarefasImagem,tarefasIcons)
 // exports.images = tarefasImagem
