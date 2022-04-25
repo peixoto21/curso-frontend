@@ -160,14 +160,18 @@ $(document).ready(function () {
 
       console.log('o campo de ' + elem.attr('name') + ' é obrigatório')
 
-      elem.parent().find('.text-muted').show()
+      // elem.parent().find('.text-muted').show()
 
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
 
       return false
     } else {
-      elem.parent().find('.text-muted').hide()
+      // elem.parent().find('.text-muted').hide()
       elem.removeClass('invalid')
+      elem.removeClass('is-invalid')
+      elem.addClass('is-valid')
     }
   }
 
@@ -180,24 +184,29 @@ $(document).ready(function () {
     if (elem.val() == '') {
       console.log("" + elem.attr('name') + ' vazio')
 
-      elem.parent().find('.text-muted').show()
+      // elem.parent().find('.text-muted').show()
 
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
 
     }
     else if (EmailRegex.test(elem.val())) {
 
-      elem.parent().find('.text-muted').hide()
+      // elem.parent().find('.text-muted').hide()
       elem.removeClass('invalid')
+      elem.removeClass('is-invalid')
+      elem.addClass('is-valid')
     }
     else {
       console.log('' + elem.attr('name') + ' invalido')
 
-      elem.parent().find('.text-muted').show()
+      // elem.parent().find('.text-muted').show()
 
       elem.addClass('invalid')
-
-      console.log(EmailRegex)
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
+      // console.log(EmailRegex)
     }
 
   }
@@ -208,22 +217,23 @@ $(document).ready(function () {
     if (elem.val() == '') {
       console.log("" + elem.attr('name') + ' vazio')
 
-      elem.parent().find('.text-muted').show()
-
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
     }
 
     else if (cepRegex.test(elem.val())) {
 
-      elem.parent().find('.text-muted').hide()
       elem.removeClass('invalid')
+      elem.removeClass('is-invalid')
+      elem.addClass('is-valid')
     }
     else {
       console.log('' + elem.attr('name') + ' invalido')
 
-      elem.parent().find('.text-muted').show()
-
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
 
       console.log(cepRegex)
     }
@@ -232,54 +242,56 @@ $(document).ready(function () {
   }
 
   function validatePhone(elem) {
-    const cepRegex = /^[0-9]{5}-[0-9]{4}$/;
+    const cepRegex = /^\(\d{2}\)\d{4,5}-?\d{4}/g;
 
     if (elem.val() == '') {
       console.log("" + elem.attr('name') + ' vazio')
 
-      elem.parent().find('.text-muted').show()
-
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
     }
 
     else if (cepRegex.test(elem.val())) {
 
-      elem.parent().find('.text-muted').hide()
       elem.removeClass('invalid')
+      elem.removeClass('is-invalid')
+      elem.addClass('is-valid')
     }
     else {
       console.log('' + elem.attr('name') + ' invalido')
 
-      elem.parent().find('.text-muted').show()
-
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
 
       console.log(cepRegex)
     }
   }
 
   function validateCpf(elem) {
-    const cepRegex = /^[0-9]{11}$/;
+    const cepRegex = /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/;
 
     if (elem.val() == '') {
       console.log("" + elem.attr('name') + ' vazio')
 
-      elem.parent().find('.text-muted').show()
-
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
     }
 
     else if (cepRegex.test(elem.val())) {
 
-      elem.parent().find('.text-muted').hide()
       elem.removeClass('invalid')
+      elem.removeClass('is-invalid')
+      elem.addClass('is-valid')
     }
     else {
       console.log('' + elem.attr('name') + ' invalido')
 
-      elem.parent().find('.text-muted').show()
-
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
 
       console.log(cepRegex)
     }
@@ -303,10 +315,10 @@ $(document).ready(function () {
     // console.log(inputEmail.val())
 
     validate(inputName)
-    validate(inputEmail)
-    validate(inputCep)
-    validate(inputPhone)
-    validate(inputCpf)
+    validateEmail(inputEmail)
+    validateCEP(inputCep)
+    validatePhone(inputPhone)
+    validateCpf(inputCpf)
 
     if (inputEmail.hasClass('invalid') || inputName.hasClass('invalid') || inputCep.hasClass('invalid') || inputPhone.hasClass('invalid') || inputCpf.hasClass('invalid')) {
       console.log('verificar campos obrigatórios')
@@ -347,7 +359,7 @@ $(document).ready(function () {
 
   $('body').on('blur', '#phone', function () {
     validatePhone($(this))
-    $(this).mask('00000-0000');
+    $(this).mask('(00)00000-0000');
   })
 
   $('body').on('blur', '#cpf', function () {

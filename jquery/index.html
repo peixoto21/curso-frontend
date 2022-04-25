@@ -31,7 +31,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#produtos">Produtos</a>
+                        <a class="nav-link" href="#featured">Produtos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-modal-open" href="#sobre" rel="sobre">Sobre nós</a>
@@ -241,31 +241,33 @@
 
     <div id="contato" class="visually-hidden">
 
-        <form action="index.html" class="form" id="target">
+        <form action="index.html" class="form " id="target">
 
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
                 <input type="text" name="nome" id="nome" title="Insira seu nome completo" class="form-control"
-                    placeholder="Digite seu nome" aria-describedby="helpNome">
-                <small id="helpNome" class="text-muted" style="display: none;">
+                    placeholder="Digite seu nome" aria-describedby="helpNome" required>
+                <small class="invalid-feedback">
                     Digite um nome válido
                 </small>
             </div>
 
             <div class="mb-3">
                 <label for="e-mail" class="form-label">Email</label>
-                <input type="text" name="e-mail" id="e-mail" class="form-control" placeholder="Digite seu e-mail"
-                    aria-describedby="helpEmail">
-                <small id="helpEmail" class="text-muted" style="display: none;">
-                    Digite um e-mail válido
-                </small>
+                <div class="input-group has-validation">
+                    <input type="text" name="e-mail" id="e-mail" class="form-control" placeholder="Digite seu e-mail"
+                        aria-describedby="helpEmail">
+                    <small id="helpEmail" class="invalid-feedback">
+                        Digite um e-mail válido
+                    </small>
+                </div>
             </div>
 
             <div class="mb-3">
                 <label for="date" class="form-label">Data</label>
-                <input type="text" name="date" id="date" class="form-control" placeholder="Digite uma data"
-                    aria-describedby="helpDate">
-                <small id="helpDate" class="text-muted" style="display: none;">
+                <input type="text" name="date" id="date" class="form-control " placeholder="Digite uma data"
+                    aria-describedby="helpDate" required>
+                <small id="helpDate" class="invalid-feedback" >
                     Digite uma data válida
                 </small>
             </div>
@@ -275,7 +277,7 @@
                 <input type="text" name="time" id="time" class="form-control" placeholder="Digite a hora"
                     aria-describedby="helpHora">
                 <small id="helpHora" class="text-muted" style="display: none;">
-                    Digite um tempo válido
+                    Digite uma hora válida
                 </small>
             </div>
 
@@ -284,7 +286,7 @@
                 <input type="text" name="cep" id="cep" class="form-control" placeholder="Digite seu cep"
                     aria-describedby="helpCEP">
                 <small id="helpCEP" class="text-muted" style="display: none;">
-                    Digite um tempo válido
+                    Digite um cep válido
                 </small>
             </div>
 
@@ -302,7 +304,7 @@
                 <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu cpf"
                     aria-describedby="helpCPF">
                 <small id="helpCPF" class="text-muted" style="display: none;">
-                    Digite um celular válido
+                    Digite um cpf válido
                 </small>
             </div>
 
