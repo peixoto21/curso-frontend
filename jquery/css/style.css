@@ -787,7 +787,7 @@ a {
 		left: 15px !important;
 	}
 	.featured-item{
-		height: 14rem;
+		height: 32rem;
 	}
 	.footer .footer-menu ul li a{
 		font-size: .9rem;
@@ -812,11 +812,19 @@ a {
 	   top: 5px !important;
    }
    .featured-item{
-	   height: 14rem;
+	   height: 29rem;
    }
 
    .footer .footer-menu ul li{
 		font-size: 1px;
 		margin: 0px 4px ;
    }
+}
+
+@media(max-width:320px){
+
+	.featured-item{
+		height: 25rem;
+	}
+
 }
