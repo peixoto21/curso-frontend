@@ -2,7 +2,7 @@
 // jQuery( function($){
 $(document).ready(function () {
 
-  $('.owl-carousel').owlCarousel();
+  // $('.owl-carousel').owlCarousel();
 
   let titulos = $('h4') // tag
 
@@ -18,37 +18,37 @@ $(document).ready(function () {
 
   //  $('.featured-item:first h4').append('<span class="position-relative top-0 start-new translate-middle badge bg-secondary" style="font-size: 0.6rem;">Novo</span>')
 
-  jQuery(function ($) {
-    var lastWidth = null;
-    $(window).bind('resize', function (e) {
-      if ((lastWidth == null || lastWidth < 1400) && window.innerWidth >= 1400) {
-        $('#novo').remove()
-        $('.featured-item:first h4').append('<span id="novo" class="position-relative top-0 start-5 translate-middle badge bg-secondary" style="font-size: 0.6rem;">Novo</span>')
-      }
-      else if ((lastWidth == null || lastWidth < 1200) && window.innerWidth >= 1200) {
-        $('#novo').remove()
-        $('.featured-item:first h4').append('<span id="novo"  class="position-relative top-0 start-6 translate-middle badge bg-secondary" style="font-size: 0.6rem;">Novo</span>')
-      }
+  // jQuery(function ($) {
+  //   var lastWidth = null;
+  //   $(window).bind('resize', function (e) {
+  //     if ((lastWidth == null || lastWidth < 1400) && window.innerWidth >= 1400) {
+  //       $('#novo').remove()
+  //       $('.featured-item:first h4').append('<span id="novo" class="position-relative top-0 start-5 translate-middle badge bg-secondary" style="font-size: 0.6rem;">Novo</span>')
+  //     }
+  //     else if ((lastWidth == null || lastWidth < 1200) && window.innerWidth >= 1200) {
+  //       $('#novo').remove()
+  //       $('.featured-item:first h4').append('<span id="novo"  class="position-relative top-0 start-6 translate-middle badge bg-secondary" style="font-size: 0.6rem;">Novo</span>')
+  //     }
 
-      else if ((lastWidth == null || lastWidth < 991) && window.innerWidth >= 991) {
-        $('#novo').remove()
-        $('.featured-item:first h4').append('<span id="novo"  class="position-relative top-0 start-7 translate-middle badge bg-secondary" style="font-size: 0.6rem;">Novo</span>')
-      }
+  //     else if ((lastWidth == null || lastWidth < 991) && window.innerWidth >= 991) {
+  //       $('#novo').remove()
+  //       $('.featured-item:first h4').append('<span id="novo"  class="position-relative top-0 start-7 translate-middle badge bg-secondary" style="font-size: 0.6rem;">Novo</span>')
+  //     }
 
-      else if ((lastWidth == null || lastWidth < 768) && window.innerWidth >= 768) {
-        $('#novo').remove()
-        $('.featured-item:first h4').append('<span id="novo"  class="position-relative top-0 start-9 translate-middle badge bg-secondary" style="font-size: 0.6rem;">Novo</span>')
-      }
+  //     else if ((lastWidth == null || lastWidth < 768) && window.innerWidth >= 768) {
+  //       $('#novo').remove()
+  //       $('.featured-item:first h4').append('<span id="novo"  class="position-relative top-0 start-9 translate-middle badge bg-secondary" style="font-size: 0.6rem;">Novo</span>')
+  //     }
 
-      else if ((lastWidth == null || lastWidth > 425) && window.innerWidth <= 425) {
-        $('#novo').remove()
-        $('.featured-item:first h4').append('<span id="novo"  class="position-relative top-0 start-100 translate-middle badge bg-secondary" style="font-size: 0.5rem;">Novo</span>')
-      }
+  //     else if ((lastWidth == null || lastWidth > 425) && window.innerWidth <= 425) {
+  //       $('#novo').remove()
+  //       $('.featured-item:first h4').append('<span id="novo"  class="position-relative top-0 start-100 translate-middle badge bg-secondary" style="font-size: 0.5rem;">Novo</span>')
+  //     }
 
 
-      lastWidth = window.innerWidth;
-    }).trigger('resize');
-  });
+  //     lastWidth = window.innerWidth;
+  //   }).trigger('resize');
+  // });
   // $('.featured-item:first h4').start('<span class="badge bg-secondary">Novo</span>')
   // $('.featured-item:first h4').html('<span class="badge bg-secondary">Novo</span>')
   // $('.featured-item:first h4').addClass('active')
@@ -73,7 +73,7 @@ $(document).ready(function () {
   /*
     * Manipulação de eventos
     */
-  $('.featured-item a').on('click', function (event) {
+  $('#emfalta').on('click', function (event) {
 
     event.preventDefault();
 
@@ -81,7 +81,32 @@ $(document).ready(function () {
 
   })
 
+  $('#estoque').on('click', function (event) {
 
+    event.preventDefault();
+    alert('Produto em estoque!')
+
+  })
+
+  $('.owl-carousel').owlCarousel({
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:false
+        }
+    }
+})
   /* 
     * Callback
     * entendendo ações que começam ao termino de outra
@@ -160,14 +185,18 @@ $(document).ready(function () {
 
       console.log('o campo de ' + elem.attr('name') + ' é obrigatório')
 
-      elem.parent().find('.text-muted').show()
+      // elem.parent().find('.text-muted').show()
 
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
 
       return false
     } else {
-      elem.parent().find('.text-muted').hide()
+      // elem.parent().find('.text-muted').hide()
       elem.removeClass('invalid')
+      elem.removeClass('is-invalid')
+      elem.addClass('is-valid')
     }
   }
 
@@ -180,24 +209,29 @@ $(document).ready(function () {
     if (elem.val() == '') {
       console.log("" + elem.attr('name') + ' vazio')
 
-      elem.parent().find('.text-muted').show()
+      // elem.parent().find('.text-muted').show()
 
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
 
     }
     else if (EmailRegex.test(elem.val())) {
 
-      elem.parent().find('.text-muted').hide()
+      // elem.parent().find('.text-muted').hide()
       elem.removeClass('invalid')
+      elem.removeClass('is-invalid')
+      elem.addClass('is-valid')
     }
     else {
       console.log('' + elem.attr('name') + ' invalido')
 
-      elem.parent().find('.text-muted').show()
+      // elem.parent().find('.text-muted').show()
 
       elem.addClass('invalid')
-
-      console.log(EmailRegex)
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
+      // console.log(EmailRegex)
     }
 
   }
@@ -208,22 +242,23 @@ $(document).ready(function () {
     if (elem.val() == '') {
       console.log("" + elem.attr('name') + ' vazio')
 
-      elem.parent().find('.text-muted').show()
-
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
     }
 
     else if (cepRegex.test(elem.val())) {
 
-      elem.parent().find('.text-muted').hide()
       elem.removeClass('invalid')
+      elem.removeClass('is-invalid')
+      elem.addClass('is-valid')
     }
     else {
       console.log('' + elem.attr('name') + ' invalido')
 
-      elem.parent().find('.text-muted').show()
-
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
 
       console.log(cepRegex)
     }
@@ -232,54 +267,56 @@ $(document).ready(function () {
   }
 
   function validatePhone(elem) {
-    const cepRegex = /^[0-9]{5}-[0-9]{4}$/;
+    const cepRegex = /^\(\d{2}\)\d{4,5}-?\d{4}/g;
 
     if (elem.val() == '') {
       console.log("" + elem.attr('name') + ' vazio')
 
-      elem.parent().find('.text-muted').show()
-
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
     }
 
     else if (cepRegex.test(elem.val())) {
 
-      elem.parent().find('.text-muted').hide()
       elem.removeClass('invalid')
+      elem.removeClass('is-invalid')
+      elem.addClass('is-valid')
     }
     else {
       console.log('' + elem.attr('name') + ' invalido')
 
-      elem.parent().find('.text-muted').show()
-
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
 
       console.log(cepRegex)
     }
   }
 
   function validateCpf(elem) {
-    const cepRegex = /^[0-9]{11}$/;
+    const cepRegex = /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/;
 
     if (elem.val() == '') {
       console.log("" + elem.attr('name') + ' vazio')
 
-      elem.parent().find('.text-muted').show()
-
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
     }
 
     else if (cepRegex.test(elem.val())) {
 
-      elem.parent().find('.text-muted').hide()
       elem.removeClass('invalid')
+      elem.removeClass('is-invalid')
+      elem.addClass('is-valid')
     }
     else {
       console.log('' + elem.attr('name') + ' invalido')
 
-      elem.parent().find('.text-muted').show()
-
       elem.addClass('invalid')
+      elem.addClass('is-invalid')
+      elem.removeClass('is-valid')
 
       console.log(cepRegex)
     }
@@ -303,10 +340,10 @@ $(document).ready(function () {
     // console.log(inputEmail.val())
 
     validate(inputName)
-    validate(inputEmail)
-    validate(inputCep)
-    validate(inputPhone)
-    validate(inputCpf)
+    validateEmail(inputEmail)
+    validateCEP(inputCep)
+    validatePhone(inputPhone)
+    validateCpf(inputCpf)
 
     if (inputEmail.hasClass('invalid') || inputName.hasClass('invalid') || inputCep.hasClass('invalid') || inputPhone.hasClass('invalid') || inputCpf.hasClass('invalid')) {
       console.log('verificar campos obrigatórios')
@@ -347,7 +384,7 @@ $(document).ready(function () {
 
   $('body').on('blur', '#phone', function () {
     validatePhone($(this))
-    $(this).mask('00000-0000');
+    $(this).mask('(00)00000-0000');
   })
 
   $('body').on('blur', '#cpf', function () {
