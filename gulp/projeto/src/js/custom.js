@@ -397,12 +397,13 @@ $(document).ready(function () {
   var carousel;
   var carouselOptions = {
     margin: 20,
-    nav: true,
+    nav: false,
     dots: true,
     slideBy: 'page',
     responsive: {
       0: {
         items: 1,
+        
         rows: 3 //custom option not used by Owl Carousel, but used by the algorithm below
 
       },

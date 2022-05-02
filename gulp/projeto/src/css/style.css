@@ -150,6 +150,8 @@ a {
 .banner {
 	margin-top: 50px;
 	background-image: url(../assets/images/banner-bg.jpg);
+	background-image: url(../images/banner-bg.jpg);
+	
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 150px 0px;
@@ -283,7 +285,7 @@ a {
 	width: 100%;
 	height: 46px;
 	border: 1px solid #fff;
-	background-color: transparent;
+	background-color: #fff;
 	padding-left: 15px;
 	color: #fff;
 	outline: none;
