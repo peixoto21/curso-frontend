@@ -75,7 +75,7 @@ $(document).ready(function () {
   /*
     * Manipulação de eventos
     */
-  $('.emfalta').on('click', function (event) {
+  $('#emfalta').on('click', function (event) {
 
     event.preventDefault();
     alert('Produto esgotado');
