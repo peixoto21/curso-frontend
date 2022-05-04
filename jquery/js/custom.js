@@ -89,6 +89,21 @@ $(document).ready(function () {
 
   })
 
+  $('.pervendedor').on('click', function (event) {
+
+    event.preventDefault();
+    alert('Vou ver se tem na loja e volto em uma hora')
+
+  })
+
+  $('.certeza').on('click', function (event) {
+
+    event.preventDefault();
+    alert('Tem certeza que quer isso? Eu escolheria outra coisa...')
+
+  })
+
+
   //   $('.owl-carousel').owlCarousel({
   //     loop:true,
   //     margin:10,
