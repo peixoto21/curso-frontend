@@ -49,14 +49,14 @@ function tarefasJS() {
         .pipe(gulp.dest('./dist/js'))       // cria arquivo em novo diretório
 }
 
-gulp.task('icons', function () {
-    return gulp.src('./src/fonts/*')
-        .pipe(gulp.dest('./dist/fonts'));
-});
+
 
 function tarefasIcons() {
-    return gulp.src('./src/fonts/*')
-        .pipe(imagemin())
+    return gulp.src([
+        './src/fonts/*',
+        './node_modules/@fortawesome/fontawesome-free/webfonts/*'
+    ])
+        
         .pipe(gulp.dest('./dist/fonts'))
 }
 
@@ -92,15 +92,15 @@ function tarefasHTML(callback) {
     // return callback()    
 }
 
-gulp.task('minify', () => {
+function minify() {
     return gulp.src('src/*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('dist'));
-});
+};
 
-function end(cb){
+function end(cb) {
     console.log('tarefas concluidas')
-    console.log('abrindo servidor')
+    console.log()
     return cb()
 }
 
@@ -111,14 +111,14 @@ gulp.task('serve', function () {
             baseDir: './dist'
         }
     })
-    gulp.watch('./src/**/*').on('change',process) //repete o processo quando alterar algo em src
-    gulp.watch('./dist/**/*').on('change',reload)
+    gulp.watch('./src/**/*').on('change', process) //repete o processo quando alterar algo em src
+    gulp.watch('./dist/**/*').on('change', reload)
 })
 
 
 
 
-const process = series(tarefasCSS, tarefasJS, tarefasHTML, tarefasImagem, tarefasIcons,end)
+const process = series(tarefasCSS, tarefasJS, tarefasHTML, tarefasImagem, tarefasIcons, end)
 
 exports.styles = tarefasCSS
 exports.scripts = tarefasJS
