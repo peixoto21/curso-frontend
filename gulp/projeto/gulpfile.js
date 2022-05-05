@@ -19,7 +19,7 @@ function tarefasCSS(cb) {
         './vendor/owl/css/owl.css',
         './vendor/jquery-ui/jquery-ui.css',
         './src/css/style.css',
-        './node_modules/@fortawesome/fontawesome-free/css/fontawesome.css'
+        './src/css/fontawesome.css'
     ])
         .pipe(stripCss())                   // remove comentários
         .pipe(concat('styles.css'))         // mescla arquivos
