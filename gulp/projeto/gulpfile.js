@@ -4,6 +4,7 @@ const cssmin = require('gulp-cssmin')
 const rename = require('gulp-rename')
 const uglify = require('gulp-uglify')
 const imagemin = require('gulp-imagemin')
+const image = require('gulp-image')
 const htmlmin = require('gulp-htmlmin')
 const stripJs = require('gulp-strip-comments')
 const stripCss = require('gulp-strip-css-comments')
@@ -56,7 +57,7 @@ function tarefasIcons() {
         './src/fonts/*',
         './node_modules/@fortawesome/fontawesome-free/webfonts/*'
     ])
-        
+
         .pipe(gulp.dest('./dist/fonts'))
 }
 
@@ -67,21 +68,21 @@ function tarefasImagem() {
         .pipe(gulp.dest('./dist/images'))
 }
 
-// gulp.task(import('image'), () => {
-//     gulp.src('./src/images/*')
-//       .pipe(image({
-//         pngquant: true,
-//         optipng: false,
-//         zopflipng: true,
-//         jpegRecompress: false,
-//         mozjpeg: true,
-//         gifsicle: true,
-//         svgo: true,
-//         concurrent: 10,
-//         quiet: true // defaults to false
-//       }))
-//       .pipe(gulp.dest('./dest/images'));
-//   });
+gulp.task('image', function() {
+    return gulp.src('./src/images/*')
+        .pipe(image({
+            pngquant: true,
+            optipng: false,
+            zopflipng: true,
+            jpegRecompress: false,
+            mozjpeg: true,
+            gifsicle: true,
+            svgo: true,
+            concurrent: 10,
+            quiet: true
+        }))
+        .pipe(gulp.dest('./dist/images'))
+});
 
 
 function tarefasHTML(callback) {
