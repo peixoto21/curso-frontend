@@ -1,3 +1,5 @@
 *.zip
 node_modules
-code.txt
+package-lock.json
+dist
+index-BKP.html
