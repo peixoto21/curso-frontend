@@ -1,0 +1,46 @@
+@use'vars';
+@use'mixins';
+
+.destack{
+    background-image: url(../images/pexels-cottonbro-4836371.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 1000px;
+    @include mixins.flex-center;
+    &-body{
+        @include mixins.flex-between;
+        @include mixins.container;
+        height: 1000px;
+
+        
+        &-title{
+            padding: 0 5vw;
+            padding-bottom: 320px;
+        }
+        &-space{
+            padding: 0 70px;
+
+    }
+    }
+    h1{
+        color: vars.$color-02;
+        font-size: 1.6rem;
+    }
+    b{
+        color: vars.$brand-color;
+        font-size: 1.6rem;
+    }
+
+}
+
+// @media(max-width:1516px){
+//     .destack{
+//         background-size: cover;
+//         background-position: center;
+
+//         // &-body{
+//         //     padding: 0 10%;
+//         // }
+
+//     }
+// }

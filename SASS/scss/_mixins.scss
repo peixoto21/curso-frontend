@@ -1,0 +1,181 @@
+@use 'vars';
+
+@mixin container {
+    max-width: vars.$container-width;
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+
+@mixin link {
+    padding: 0 0.5rem;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin bg-img($img) {
+    background-image: url('../images/#{$img}');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .6s;
+
+    &:hover {
+        background-size: 110%;
+    }
+}
+
+// @mixin md-screen{
+//     @media(max-width: 1516px){
+//         @content
+//     }
+// }
+@mixin md-screen {
+    @media(max-width:1516px) {
+        .destack {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .footer {
+            margin: 0 30px;
+        }
+    }
+
+}
+
+@mixin mobile {
+    @media(max-width: 425px) {
+        .header {
+            display: flex;
+            flex-direction: column;
+
+            &-brand {
+                flex-direction: column;
+                margin-bottom: 10px;
+
+                h4 {
+                    font-size: 4rem;
+                    padding-left: 10px;
+                }
+
+                h5 {
+                    padding-top: 0;
+                    text-align: start;
+                }
+            }
+
+            &-navbar {
+                a {
+                    font-size: 1.3rem;
+                    padding: 0 .9rem;
+                }
+            }
+        }
+
+        .destack {
+
+            padding: 10px;
+            height: 500px;
+            display: block;
+
+            &-body {
+                display: block;
+                height: 500px;
+
+                &-title {
+                    padding-bottom: 37px;
+                    padding-top: 14.5px;
+                    text-align: center;
+
+                    h1 {
+                        font-size: 1.4rem;
+                    }
+
+                    b {
+                        font-size: 1.4rem;
+                    }
+
+                }
+            }
+        }
+
+        .arcade {
+            padding: 0 10px;
+
+            &-bodyTitle {
+                text-align: center;
+            }
+
+            &-body {
+
+                flex-direction: column;
+            }
+
+            &-card {
+                width: 90%;
+                height: 320px;
+                margin-bottom: 6%;
+            }
+        }
+
+        .footer {
+            margin: 0 10px;
+
+            &-social-media {
+                ul {
+                    li {
+                        margin: 0 .5rem;
+
+                        .fa-2x {
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media(max-width:320px) {
+        .header {
+            display: flex;
+            flex-direction: column;
+
+            &-brand {
+
+                h4 {
+                    font-size: 4rem;
+
+                }
+            }
+
+            &-navbar {
+                margin-top: 10px;
+            }
+        }
+
+        .destack {
+            &-body {
+                &-title {
+                    padding: 0;
+                    padding-bottom: 37px;
+                    padding-top: 14.5px;
+
+                    b {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}

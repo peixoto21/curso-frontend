@@ -1,0 +1,50 @@
+@use'vars';
+@use'mixins';
+
+
+footer {
+    padding-top: 20px;
+    border-top: solid;
+    border-bottom: solid;
+    background-color: vars.$bg-footer-color;
+}
+
+.footer {
+    @include mixins.container;
+    @include mixins.flex-between;
+
+    &-social-media {
+        ul {
+            height: 100%;
+            @include mixins.flex-center;
+
+            li {
+                margin: 0 1rem;
+
+                a {
+                    i {
+                        &:hover {
+                            color: rgb(219, 219, 219);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-credentials{
+        small{
+            font-size: 0.6rem;
+        }
+    }
+}
+
+
+
+// @media(max-width:1516px){
+
+//     .footer{
+//         margin: 0 30px;
+//     }
+
+// }

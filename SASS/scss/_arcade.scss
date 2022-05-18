@@ -1,0 +1,77 @@
+@use'vars';
+@use'mixins';
+
+
+.arcade {
+    padding-top: 20px;
+    border-top: solid;
+    background: vars.$bg-arcade-color;
+
+    &-bodyTitle {
+        @include mixins.container;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        color: vars.$color-03;
+    }
+
+    &-body {
+
+        @include mixins.flex-center;
+        @include mixins.container;
+        // margin: 0 250px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+
+
+
+    &-card {
+        width: 31%;
+        height: 400px;
+        margin-bottom: 4%;
+        @include mixins.flex-center;
+        flex-direction: column;
+        justify-content: space-between;
+        
+
+        &-title {
+            font-family: vars.$nav-font;
+            color: vars.$color-02;
+            margin-bottom: 1rem;
+            margin-top: 5px;
+        }
+
+        &-button {
+            padding: .6rem 2rem;
+            border: 2px solid vars.$color-02;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: vars.$color-02;
+
+            &:hover {
+                background-color: vars.$color-02;
+                color: vars.$color-04;
+            }
+        }
+
+    }
+
+    img {
+        height: 200px;
+        width: auto;
+    }
+
+    #card-1{
+        @include mixins.bg-img('pexels-anastasia-shuraeva-9821844.jpg')
+    }
+    #card-2{
+        @include mixins.bg-img('pexels-anastasia-shuraeva-9833533.jpg')
+    }
+    #card-3{
+        @include mixins.bg-img('pexels-anastasia-shuraeva-9834710.jpg')
+    }
+}

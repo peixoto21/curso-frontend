@@ -1,0 +1,58 @@
+@use'vars';
+@use'mixins';
+
+header{
+    background-color: vars.$color-04;
+}
+
+.header{
+    @include mixins.flex-between;
+    @include mixins.container;
+
+
+    &-brand{
+        display: flex;
+        h4{
+            color: vars.$brand-color;
+            font-family: vars.$brand-font;
+            font-size: vars.$font-size-brand;
+            margin-bottom: -10px;
+        }
+        h5{
+            font-size: vars.$font-sm;
+            color: vars.$color-02;
+            padding-top: 50px;
+            padding-left: 10px;
+        }
+    }
+    &-navbar{
+        
+        ul{
+
+            @include mixins.flex-center;
+        }
+        a{
+            @include mixins.link;
+            color: vars.$brand-color;
+            font-family: vars.$nav-font;
+            font-weight: 500;
+            font-size: 1.2rem;
+
+            &:hover{
+                text-decoration: underline;
+                text-decoration-thickness: 3px;
+                text-decoration-color: vars.$brand-color; 
+            }
+        }
+
+    }
+
+}
+
+
+// @media(max-width: 1516px){
+//     .header{
+//         margin: 0 5%;
+//     }
+
+// }

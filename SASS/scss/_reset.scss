@@ -1,0 +1,27 @@
+@use 'vars';
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: vars.$font-family-default;
+}
+
+body{
+    background-color: vars.$bg-color;
+    color:vars.$text-color;
+    width: auto;
+    a{
+        color: vars.$text-color;
+        text-decoration: none;
+        transition: .4s;
+    }
+    ul{
+        list-style: none;
+    }
+}
+
+img{
+    width: 1170px;
+}
