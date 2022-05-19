@@ -1,0 +1,324 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ddd;
+  color: rgb(32, 32, 32);
+  width: auto;
+}
+body a {
+  color: rgb(32, 32, 32);
+  text-decoration: none;
+  transition: 0.4s;
+}
+body ul {
+  list-style: none;
+}
+
+img {
+  width: 1170px;
+}
+
+header {
+  background-color: #222;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1170px;
+  padding: 1rem 0;
+  margin: 0 auto;
+}
+.header-brand {
+  display: flex;
+}
+.header-brand h4 {
+  color: rgb(255, 122, 34);
+  font-family: "Bebas Neue", cursive;
+  font-size: 4rem;
+  margin-bottom: -10px;
+}
+.header-brand h5 {
+  font-size: 0.8rem;
+  color: rgb(245, 245, 245);
+  padding-top: 50px;
+  padding-left: 10px;
+}
+.header-navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-navbar a {
+  padding: 0 0.5rem;
+  color: rgb(255, 122, 34);
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.header-navbar a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: rgb(255, 122, 34);
+}
+
+.destack {
+  background-image: url(../images/pexels-cottonbro-4836371.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.destack-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1170px;
+  padding: 1rem 0;
+  margin: 0 auto;
+  height: 1000px;
+}
+.destack-body-title {
+  padding: 0 5vw;
+  padding-bottom: 320px;
+}
+.destack-body-space {
+  padding: 0 70px;
+}
+.destack h1 {
+  color: rgb(245, 245, 245);
+  font-size: 1.6rem;
+}
+.destack b {
+  color: rgb(255, 122, 34);
+  font-size: 1.6rem;
+}
+
+.arcade {
+  padding-top: 20px;
+  border-top: solid;
+  background: linear-gradient(#333, rgb(39, 39, 39), #222);
+}
+.arcade-bodyTitle {
+  max-width: 1170px;
+  padding: 1rem 0;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: rgb(219, 88, 0);
+}
+.arcade-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1170px;
+  padding: 1rem 0;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.arcade-card {
+  width: 31%;
+  height: 400px;
+  margin-bottom: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.arcade-card-title {
+  font-family: "Roboto Flex", sans-serif;
+  color: rgb(245, 245, 245);
+  margin-bottom: 1rem;
+  margin-top: 5px;
+}
+.arcade-card-button {
+  padding: 0.6rem 2rem;
+  border: 2px solid rgb(245, 245, 245);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: rgb(245, 245, 245);
+}
+.arcade-card-button:hover {
+  background-color: rgb(245, 245, 245);
+  color: #222;
+}
+.arcade img {
+  height: 200px;
+  width: auto;
+}
+.arcade #card-1 {
+  background-image: url("../images/pexels-anastasia-shuraeva-9821844.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.arcade #card-1:hover {
+  background-size: 110%;
+}
+.arcade #card-2 {
+  background-image: url("../images/pexels-anastasia-shuraeva-9833533.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.arcade #card-2:hover {
+  background-size: 110%;
+}
+.arcade #card-3 {
+  background-image: url("../images/pexels-anastasia-shuraeva-9834710.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.6s;
+}
+.arcade #card-3:hover {
+  background-size: 110%;
+}
+
+footer {
+  padding-top: 20px;
+  border-top: solid;
+  border-bottom: solid;
+  background-color: rgb(231, 131, 0);
+}
+
+.footer {
+  max-width: 1170px;
+  padding: 1rem 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-social-media ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-social-media ul li {
+  margin: 0 1rem;
+}
+.footer-social-media ul li a i:hover {
+  color: rgb(219, 219, 219);
+}
+.footer-credentials small {
+  font-size: 0.6rem;
+}
+
+@media (max-width: 1516px) {
+  .destack {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .footer {
+    margin: 0 30px;
+  }
+}
+@media (max-width: 425px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-brand {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .header-brand h4 {
+    font-size: 4rem;
+    padding-left: 10px;
+  }
+  .header-brand h5 {
+    padding-top: 0;
+    text-align: start;
+  }
+  .header-navbar a {
+    font-size: 1.3rem;
+    padding: 0 0.9rem;
+  }
+
+  .destack {
+    padding: 10px;
+    height: 500px;
+    display: block;
+  }
+  .destack-body {
+    display: block;
+    height: 500px;
+  }
+  .destack-body-title {
+    padding-bottom: 37px;
+    padding-top: 14.5px;
+    text-align: center;
+  }
+  .destack-body-title h1 {
+    font-size: 1.4rem;
+  }
+  .destack-body-title b {
+    font-size: 1.4rem;
+  }
+
+  .arcade {
+    padding: 0 10px;
+  }
+  .arcade-bodyTitle {
+    text-align: center;
+  }
+  .arcade-body {
+    flex-direction: column;
+  }
+  .arcade-card {
+    width: 90%;
+    height: 320px;
+    margin-bottom: 6%;
+  }
+
+  .footer {
+    margin: 0 10px;
+  }
+  .footer-social-media ul li {
+    margin: 0 0.5rem;
+  }
+  .footer-social-media ul li .fa-2x {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 320px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-brand h4 {
+    font-size: 4rem;
+  }
+  .header-navbar {
+    margin-top: 10px;
+  }
+
+  .destack-body-title {
+    padding: 0;
+    padding-bottom: 37px;
+    padding-top: 14.5px;
+  }
+  .destack-body-title b {
+    font-size: 1.3rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
