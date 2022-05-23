@@ -7,5 +7,6 @@
 @use 'footer';
 
 @include mixins.md-screen;
+@include mixins.tablet;
 @include mixins.mobile;
     

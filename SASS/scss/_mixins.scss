@@ -41,9 +41,29 @@
 // }
 @mixin md-screen {
     @media(max-width:1516px) {
+        .header {
+            &-brand {
+                margin-left: 30px;
+            }
+
+            &-navbar {
+                margin-right: 30px;
+            }
+        }
+
         .destack {
             background-size: cover;
             background-position: center;
+        }
+
+        .arcade {
+            &-bodyTitle {
+                margin-left: 30px;
+            }
+
+            &-body {
+                margin: 0 30px;
+            }
         }
 
         .footer {
@@ -51,6 +71,18 @@
         }
     }
 
+}
+
+@mixin tablet {
+    @media(max-width: 768px) {
+        .arcade {
+
+            &-card {
+                height: 340px;
+            }
+
+        }
+    }
 }
 
 @mixin mobile {
