@@ -1,8 +1,10 @@
+import './style.sass'
 
 function titleComponent(){
-    const elemH1 = document.createElement('h1')
-    elemH1.innerHTML = "Hello world"
-    return elemH1
+    const z = document.createElement('h1');
+    z.innerHTML = "Hello world";
+    z.classList.add('title')
+    return z;
 }
 
-document.body.appendChild(titleComponent)
+document.body.appendChild(titleComponent())

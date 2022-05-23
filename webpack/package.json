@@ -4,7 +4,8 @@
   "description": "Webpack: Empacotador de módulos JS",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"webpack"
   },
   "keywords": [],
   "author": "Victor Peixoto",
@@ -12,5 +13,13 @@
   "dependencies": {
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1"
   }
 }
