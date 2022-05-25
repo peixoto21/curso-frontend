@@ -73,12 +73,34 @@
 
 }
 
+@mixin md-sm-screen{
+    @media(max-width:1000px){
+        .arcade {
+
+            &-card {
+                height: 350px;
+            }
+
+        }
+    }
+    @media(max-width:850px){
+        .arcade {
+
+            &-card {
+                height: 320px;
+            }
+
+        }
+    }
+
+}
+
 @mixin tablet {
     @media(max-width: 768px) {
         .arcade {
 
             &-card {
-                height: 340px;
+                height: 300px;
             }
 
         }
