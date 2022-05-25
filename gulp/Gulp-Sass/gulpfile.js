@@ -35,7 +35,7 @@ function tarefasSASS(cb) {
     
     gulp.src('./src/scss/**/*.scss')
         .pipe(sass()) // transforma o sass para css
-        .pipe(gulp.dest('./dist/css')) 
+        .pipe(gulp.dest('./src/css')) 
 
     cb()
 }
@@ -128,7 +128,7 @@ gulp.task('serve', function () {
 
 
 
-const process = series(tarefasCSS, tarefasJS, tarefasHTML, tarefasImagem, tarefasSASS,tarefasIcons, end)
+const process = series(tarefasSASS,tarefasCSS, tarefasJS, tarefasHTML, tarefasImagem, tarefasIcons, end)
 
 exports.styles = tarefasCSS
 exports.scripts = tarefasJS
