@@ -1,9 +1,14 @@
 import './style.sass'
 import img from './about-us.jpg'
 
+function rootStyle(){
+    const elemRoot = document.getElementById('root')
+    elemRoot.classList.add('container')
+}
+
 function titleComponent(){
     const z = document.createElement('h1');
-    z.innerHTML = "Hello world";
+    z.innerHTML = "Hello world 5";
     z.classList.add('title')
     return z;
 }
@@ -14,5 +19,6 @@ function imgComponent(){
     return elemImg
 }
 
+rootStyle()
 document.body.appendChild(titleComponent())
 document.body.appendChild(imgComponent())
