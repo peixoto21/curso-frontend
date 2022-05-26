@@ -1,0 +1,67 @@
+$color-font: rgb(20, 20, 20);
+$color-box-text: rgb(6, 25, 117);
+$color-box: rgb(33, 63, 185);
+$color-bg-default: rgb(255, 224, 51);
+$font-default: Arial, Helvetica, sans-serif;
+
+body {
+    background: url('../assets/background.jpg') no-repeat top center;
+    background-size: cover;
+    font-family: $font-default;
+    margin: 0;
+}
+
+h1 {
+    color: $color-font;
+    text-align: center;
+    width: 100%;
+}
+
+h2{
+    margin: 0 3rem;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+}
+
+.container {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+%box{
+    display: flex;
+    background: $color-bg-default;
+    border-radius: 1rem;
+    margin: 0 3rem;
+}
+
+.flexbox1 {
+    @extend %box;
+    padding: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.flexbox2{
+    @extend %box;
+    padding: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box{
+    border-radius: 1rem;
+    border: 2px solid $color-box;
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    color: $color-box-text;
+}
