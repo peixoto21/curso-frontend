@@ -17,7 +17,7 @@ h1 {
     width: 100%;
 }
 
-h2{
+h2 {
     margin: 0 3rem;
     margin-bottom: 1rem;
     margin-top: 4rem;
@@ -35,33 +35,62 @@ h2{
 
 }
 
-%box{
+%box {
     display: flex;
     background: $color-bg-default;
     border-radius: 1rem;
+    padding: 1rem;
     margin: 0 3rem;
 }
 
 .flexbox1 {
     @extend %box;
-    padding: 1rem;
+
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.flexbox2{
+
+.flexbox2 {
     @extend %box;
-    padding: 1rem;
+
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.box{
+.flexbox3 {
+    @extend %box;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.flexcenter {
+    @extend %box;
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.flexgrid {
+    @extend %box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.box {
     border-radius: 1rem;
     border: 2px solid $color-box;
+    margin: 1rem auto;
     width: 10rem;
     height: 10rem;
     text-align: center;
+    align-content: center;
     color: $color-box-text;
 }
