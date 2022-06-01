@@ -33,4 +33,5 @@ npm install
 - Na raiz do projeto, executar o comando:
 ```
 npm run dev
+usar 'export NODE_OPTIONS=--openssl-legacy-provider' para rodar certo o run dev
 ```
