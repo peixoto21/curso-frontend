@@ -8,7 +8,7 @@ function rootStyle(){
 
 function titleComponent(){
     const z = document.createElement('h1');
-    z.innerHTML = "Hello world 5";
+    z.innerHTML = "Hello world 6";
     z.classList.add('title')
     return z;
 }
