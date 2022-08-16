@@ -1,8 +1,8 @@
-$color-font: #33d ;
-$color-bg-default: #a9f;
+$color-font: rgb(0, 0, 0);
+$color-bg-default: rgb(235, 182, 102);
 $color-bg-boxes: #FD3;
 $font-default: Arial, Helvetica, sans-serif;
-$font-size-default:1.6rem;
+$font-size-default: 1.6rem;
 
 html {
     font-size: 62.5%;
@@ -20,17 +20,26 @@ h1 {
 }
 
 h2 {
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
-header,section,footer{
+header,
+section,
+footer {
     display: block;
     float: left;
     width: 100%;
 }
 
-#sobre{
+#root {
+    align-items: center;
+}
+
+#sobre {
     background-color: white;
+    border-radius: 1rem;
+    max-width: 1000px;
+
 }
 
 .container {
@@ -46,6 +55,36 @@ header,section,footer{
 
 }
 
-@import 'vitrine'
+#produtos {
+    max-width: 1000px;
 
 
+
+}
+#catalogo, #contatoTitle{
+    display: flex;
+    justify-content: center;
+}
+#catalogo h1, #contatoTitle h1{
+    font-size: 2.7rem;
+    text-align: center;
+    border-radius: 1rem;
+    max-width: 150px;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+#contato {
+    max-width: 1000px
+}
+
+footer {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center
+}
+
+@import 'vitrine';
+@import 'cabecalho';
+@import 'sobre';
+@import 'form';

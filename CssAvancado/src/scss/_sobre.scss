@@ -1,0 +1,49 @@
+.sobrenos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px;
+    padding-bottom: 10px;
+    align-items: top;
+    max-height: 300px;
+    max-width: 1000px;
+    // max-width: 100%;
+
+
+    article {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: flex-start;
+
+        h1 {
+            padding-top: 15px;
+            margin: 0;
+            font-size: 2.3rem;
+            color: black;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.6rem;
+            padding-right: 20px;
+        }
+    }
+
+    aside {
+
+
+        #localizacao {
+            overflow: hidden;
+            max-height: 100%;
+            img {
+                width: 100%;
+                
+                
+            }
+
+        }
+    }
+
+}
