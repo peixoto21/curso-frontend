@@ -1,142 +1,52 @@
-$color-font: rgb(241, 241, 241);
-$color-box-text: rgb(240, 241, 250);
-$color-box: rgb(57, 92, 233);
-$color-box-inner: rgb(18, 43, 141);
-$color-bg-default: rgb(255, 224, 51);
+$color-primary: #195484;
+$color-secondary: #f58220;
+$font-color-primary: #ffffff;
+$font-color-secondary:#454545;
 $font-default: Arial, Helvetica, sans-serif;
+$font-size-default: 1.6rem;
+
+@import 'fonts';
+
+html{
+
+    font-size: 62.5%;
+}
 
 body {
-    background: url('../assets/background.jpg') no-repeat top center;
-    background-size: cover;
+    background-color: $color-primary;
+    font-family: $font-default;
+}
+
+body {
+    background-color: $color-primary;
     font-family: $font-default;
     margin: 0;
 }
 
 h1 {
-    color: $color-font;
+    color: $font-color-primary;
     text-align: center;
-    width: 100%;
-}
-
-h2 {
-    margin: 0 3rem;
-    margin-bottom: 1rem;
     margin-top: 4rem;
-    color: $color-font;
+}
+h2 {
+    color: $font-color-primary;
+    font-family: 'freshman', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    margin-top: 4rem;
+    // text-shadow: 1px 2px 8px #FFFFFF;
 }
 
-.container {
-    display: block;
-    max-width: 1200px;
-    margin: 0 auto;
+article {
 
-    img {
-        width: 100%;
-        height: auto;
+    h1 {
+        color: $color-secondary;
+        font-size: 3rem;
+        text-align: left;
     }
 
 }
 
-%box {
-    display: flex;
-    background: $color-bg-default;
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 2rem auto 3rem;
-    align-items: center;
-    max-width: 700px;
-    height: 20rem;
-}
 
-.flexbox1 {
-    @extend %box;
 
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;//horinzontal
-    align-items: flex-start;//vertical
-}
-
-.flexbox2 {
-    @extend %box;
-
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.flexbox3 {
-    @extend %box;
-
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.flexcenter {
-    @extend %box;
-
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-}
-
-.flexgrid {
-    @extend %box;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr 1fr;
-    justify-content: space-between;
-    gap: 2rem;
-    height: fit-content;
-}
-
-.box {
-    background-color: $color-box-inner;
-    border-radius: 1rem;
-    border: 2px solid $color-box;
-    display: flex;
-    margin: 1rem auto;
-    position: relative;
-    width: 10rem;
-    height: 10rem;
-    // text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: $color-box-text;
-
-    // animation-name: slideIn;
-    // animation-duration: 3s;
-    // animation-iteration-count: 2;
-}
-
-.fleximg {
-    @extend %box;
-    .box{
-        overflow: hidden;
-        border: 3px solid $color-bg-default;
-        width: auto;
-        img{
-            width: 20rem;
-            height: 10rem;
-            object-fit: cover;
-            object-position: 50% 70%;
-        }
-    }
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-@keyframes slideIn{
-    from{
-        left: -999px;
-        opacity: .1;
-
-    }
-
-    to{
-        left: 0;
-        opacity: 1;
-    }
-}
+@import 'vitrine';

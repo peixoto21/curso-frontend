@@ -36,8 +36,10 @@ formulario.onsubmit = function(){
     var emailcheck = document.getElementById("email").value;
     if(validaEmail(emailcheck)){
         alert("formulário enviado!")
+
         return true
     }
+    
     return false
 }
 // document.querySelector('#building')

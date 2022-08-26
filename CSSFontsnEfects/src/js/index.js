@@ -1,6 +1,6 @@
 import '../scss/styles.scss'
-import imageBuilding from "../assets/building.jpg"
-import imageNotebook from "../assets/551497.jpg"
+// import imageBuilding from "../assets/building.jpg"
+// import imageNotebook from "../assets/551497.jpg"
 
 const elemRoot = document.getElementById('root')
 elemRoot.classList.add('container')

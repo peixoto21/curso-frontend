@@ -1,17 +1,13 @@
-# Framework Simulator
-Estrutura básica de projetos front-end para estudos de HTML, JS, CSS / SASS. 
+# Lance Negócios
+Projeto para base de conhecimento de CSS Avançado.
 
-- Flexível para você adaptar para projetos e estudos.
-- Estensível, você consegue instalar novas bibliotecas e adaptar para outras linguagens.  
+## Atividade
+- Implementar mais seções que achar necessário.
+- Adaptar conteúdo para alguma ideia sua.
+- Use a criativadade para criar algo diferente a partir dos conceitos e códigos aprendidos.
 
-## Stack inicial
-- Babel
-- CSS
-- HTML
-- JavaScript
-- Node / NPM
-- Sass
-- Webpack
+## Projeto Base (framework simulator)
+- Baixar, instalar e rodar
 
 ## Instalação
 - Requer o node.js instalado
@@ -23,5 +19,6 @@ npm install
 ## Execução
 - Na raiz do projeto, executar o comando:
 ```
+export NODE_OPTIONS=--openssl-legacy-provider
 npm run dev
 ```
