@@ -1,0 +1,69 @@
+.vitrine {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+    margin-top: 2rem;
+
+    &__item {
+        background-color: white;
+        border-radius: 1rem;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 20rem;
+        // max-height: 400px;
+        padding: .90rem;
+        transition: .5s;
+
+        &:hover {
+            -webkit-box-shadow: 1px 1px 5px 5px rgba(0, 00, 0, .4);
+            box-shadow: 1px 1px 5px 5px rgba(0, 00, 0, .4);
+            transform: translateY(-0.5rem);
+        }
+    }
+
+    &__produto {
+        font-size: 2rem;
+        margin: 12px 0;
+    }
+
+    &__image {
+        background-color: rgb(48, 48, 48);
+        width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+        justify-content: center;
+
+        #boximg1,
+        #boximg2,
+        #boximg3,
+        #boximg4 {
+            margin: 5px;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        img {
+            // padding-right: 5px;
+            align-items: center;
+            // padding-left: 3px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__button {
+        background-color: $color-font;
+        border-radius: 1rem;
+        border: 1px solid $color-bg-default;
+        color: white;
+        font-weight: bold;
+        padding: .5rem 1rem;
+        font-size: $font-size-default;
+        text-decoration: none;
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+}
