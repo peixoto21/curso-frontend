@@ -5,6 +5,7 @@ import imageBoxCat2 from '../assets/images/Box2.png'
 import imageBoxCat3 from '../assets/images/Box3.png'
 import imageBoxCat4 from '../assets/images/Box4.png'
 import imageBanner from '../assets/images/BoxKing-Banner.png'
+import logoAba from '../assets/images/Logo.png'
 
 const elemRoot = document.getElementById('root')
 elemRoot.classList.add('container')
@@ -27,6 +28,9 @@ elemImageBoxcat4.src = imageBoxCat4
 
 const bannerimg = new Image()
 bannerimg.src = imageBanner
+
+const logoNaAba = new Image()
+logoNaAba.src = logoAba
 
 function validaEmail(email){
     var regex = /\S+@\S+\.\S+/;
@@ -65,3 +69,6 @@ document.querySelector('#boximg4')
  
 document.querySelector('.bannerplace')
     .appendChild(bannerimg)    
+
+document.querySelector('#logo')
+    .appendChild(logoNaAba)    
