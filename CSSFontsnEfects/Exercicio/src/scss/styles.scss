@@ -6,7 +6,7 @@ $font-size-default: 1.6rem;
 
 html {
     font-size: 62.5%;
-    
+    scroll-behavior: smooth;
 }
 
 body {
@@ -94,12 +94,16 @@ footer {
 @import 'cabecalho';
 @import 'sobre';
 @import 'form';
+@import 'fonts';
+@import 'banner';
 
 @media(max-width:1110px) {
 
     #sobre,
     #produtos,
     #contato,
+    #banner,
+    .bannerplace,
     footer {
         max-width: 90vw;
     }
@@ -157,6 +161,17 @@ footer {
 
     #catalogo h1,
     #contatoTitle h1 {
-        margin-top: 20px
+        margin-top: 2rem
+    }
+    .bannerplace{
+        margin: 0;
+    }
+    #banner h1{
+        margin: 1.5rem 0;
+    }
+    .vitrine{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: .5rem;
     }
 }

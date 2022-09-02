@@ -1,9 +1,11 @@
 import '../scss/styles.scss'
-import imageBoxOne from '../assets/caixa-nova.jpg'
-import imageBoxCat1 from '../assets/Box1.png'
-import imageBoxCat2 from '../assets/Box2.png'
-import imageBoxCat3 from '../assets/Box3.png'
-import imageBoxCat4 from '../assets/Box4.png'
+import imageBoxOne from '../assets/images/caixa-nova.jpg'
+import imageBoxCat1 from '../assets/images/Box1.png'
+import imageBoxCat2 from '../assets/images/Box2.png'
+import imageBoxCat3 from '../assets/images/Box3.png'
+import imageBoxCat4 from '../assets/images/Box4.png'
+import imageBanner from '../assets/images/BoxKing-Banner.png'
+import logoAba from '../assets/images/Logo.png'
 
 const elemRoot = document.getElementById('root')
 elemRoot.classList.add('container')
@@ -23,6 +25,12 @@ elemImageBoxcat3.src = imageBoxCat3
 
 const elemImageBoxcat4 = new Image()
 elemImageBoxcat4.src = imageBoxCat4
+
+const bannerimg = new Image()
+bannerimg.src = imageBanner
+
+const logoNaAba = new Image()
+logoNaAba.src = logoAba
 
 function validaEmail(email){
     var regex = /\S+@\S+\.\S+/;
@@ -57,4 +65,10 @@ document.querySelector('#boximg2')
 document.querySelector('#boximg3')
     .appendChild(elemImageBoxcat3) 
 document.querySelector('#boximg4')
-    .appendChild(elemImageBoxcat4)               
+    .appendChild(elemImageBoxcat4)   
+ 
+document.querySelector('.bannerplace')
+    .appendChild(bannerimg)    
+
+document.querySelector('#logo')
+    .appendChild(logoNaAba)    
