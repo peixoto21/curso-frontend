@@ -1,11 +1,13 @@
+"use strict"
+
 function Pessoa() {
 
     // const pessoa = this
     // ao inves de ter que setar o valor de uma variavel para o this podemos usar => para as funções usarem o this que foi instanciado nelas mesmas
     this.idade = 0
-    setInterval(() =>{
+    setInterval(() => {
         console.log(this.idade++)
-    }, 2000);
+    }, 2000)
 }
 
 

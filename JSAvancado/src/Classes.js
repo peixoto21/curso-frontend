@@ -1,34 +1,40 @@
 class Animal {
 
-    constructor(especie){
-        this.especie= especie
+    constructor(especie) {
+        this.especie = especie
     }
 
-    falar (){
+    falar() {
         console.log(this.especie + ' ')
     }
-    comer(){
+    comer() {
         console.log(this.especie + ' ')
     }
-    dormir(){
+    dormir() {
         console.log(this.especie + ' ')
     }
 }
 
-class Cachorro extends Animal{
-    falar(){
-        console.log(this.especie + ' au au au')
+// class Cachorro extends Animal{
+//     falar(){
+//         console.log(this.especie + ' au au au')
+//     }
+//     comer(){
+//         console.log(this.especie + ' come ração')
+//     }
+//     dormir(){
+//         console.log(this.especie + ' dorme legal')
+//     }
+// }
+
+
+
+export default class Cachorro extends Animal {
+    falar() {
+        console.log(this.especie + ' fala au au au')
     }
-    comer(){
-        console.log(this.especie + ' come ração')
-    }
-    dormir(){
-        console.log(this.especie + ' dorme legal')
+
+    comer() {
+        console.log(this.especie + ' come ração ')
     }
 }
-
-const cao = new Cachorro('cachorro')
-
-cao.falar()
-cao.comer()
-cao.dormir()
